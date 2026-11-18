@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mike's Plumbing | Columbus, OH</title>
+<meta name="description" content="Mike's Plumbing: 24/7 emergency repairs, water heater installation and repair, and drain cleaning in Columbus, OH.">
+<style>
+:root{
+  --navy:#1B2A41;
+  --navy-2:#243A5E;
+  --blue:#1E88C7;
+  --blue-light:#E8F4FB;
+  --orange:#E8701A;
+  --orange-dark:#B8520C;
+  --cream:#FBF8F3;
+  --white:#FFFFFF;
+  --text:#1B2A41;
+  --muted:#4A5568;
+  --border:#D6DEE8;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(27,42,65,.12);
+  --shadow-lg:0 18px 40px rgba(27,42,65,.22);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:system-ui,"Segoe UI",Roboto,Verdana,sans-serif;
+  font-size:20px;line-height:1.6;color:var(--text);background:var(--cream);
+}
+img,svg{display:block;max-width:100%}
+a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+  outline:4px solid var(--orange);outline-offset:3px;border-radius:6px
+}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--white);padding:12px 18px;z-index:999;font-weight:700;border-radius:8px}
+.skip:focus{left:12px}
+.container{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:72px 0}
+.alt{background:var(--white)}
+h1,h2,h3{font-weight:800;letter-spacing:-.02em;line-height:1.2;color:var(--navy)}
+h1{font-size:clamp(2.2rem,5vw,3.4rem)}
+h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:14px}
+h3{font-size:1.45rem;margin-bottom:8px}
+.lead{font-size:1.25rem;color:var(--muted);max-width:640px}
+.eyebrow{display:inline-block;font-size:.95rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin-bottom:8px}
+
+/* Header / nav */
+.topbar{
+  position:sticky;top:0;z-index:100;background:var(--navy);color:var(--white);
+  box-shadow:0 4px 18px rgba(0,0,0,.2)
+}
+.topbar .container{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.35rem;color:var(--white);text-decoration:none}
+.brand-icon{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--blue),#5FC3F0);display:grid;place-items:center}
+nav ul{display:flex;gap:6px;list-style:none;flex-wrap:wrap}
+nav a{
+  display:block;min-height:48px;line-height:48px;padding:0 16px;border-radius:10px;
+  color:var(--white);text-decoration:none;font-weight:600;transition:background .2s
+}
+nav a:hover{background:var(--navy-2)}
+nav a.active{background:var(--blue);box-shadow:inset 0 -3px 0 var(--orange)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:56px;padding:14px 26px;border-radius:14px;font-size:1.15rem;font-weight:700;
+  border:2px solid transparent;text-decoration:none;cursor:pointer;
+  transition:transform .2s,box-shadow .2s,background .2s;font-family:inherit
+}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn-call{background:var(--orange);color:#111;box-shadow:0 6px 18px rgba(232,112,26,.35)}
+.btn-call:hover{background:#F4822F}
+.btn-outline{background:transparent;color:var(--white);border-color:var(--white)}
+.btn-outline:hover{background:var(--white);color:var(--navy)}
+.btn-navy{background:var(--navy);color:var(--white)}
+.btn-navy:hover{background:var(--navy-2)}
+.btn-header{min-height:52px;padding:10px 20px;font-size:1.05rem}
+.icon{width:26px;height:26px;flex-shrink:0}
+
+/* Hero */
+.hero{
+  position:relative;overflow:hidden;color:var(--white);
+  background:linear-gradient(135deg,var(--navy) 0%,#1D4E7E 55%,var(--blue) 100%);
+  padding:90px 0 130px
+}
+.hero::after{
+  content:"";position:absolute;left:0;right:0;bottom:-1px;height:110px;
+  background:var(--cream);
+  clip-path:path('M0,60 C240,120 480,0 720,40 C960,80 1200,120 1440,40 L1440,120 L0,120 Z');
+  width:100%;
+}
+.hero h1{color:var(--white);margin-bottom:18px}
+.hero .tagline{
+  display:inline-block;background:rgba(255,255,255,.15);padding:6px 14px;border-radius:999px;
+  font-weight:600;margin-bottom:20px;font-size:1.05rem
+}
+.hero p.sub{font-size:1.3rem;max-width:620px;margin-bottom:30px;color:#E6F2FA}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-visual{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius);
+  padding:28px;backdrop-filter:blur(4px)
+}
+.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.big-number{font-size:3.4rem;font-weight:800;color:var(--white);line-height:1}
+.hero-visual ul{list-style:none;display:grid;gap:14px;margin-top:18px}
+.hero-visual li{display:flex;gap:12px;align-items:center;font-weight:600}
+.check{width:32px;height:32px;border-radius:50%;background:var(--orange);display:grid;place-items:center;flex-shrink:0}
+
+/* Trust bar */
+.trust{background:var(--white);border-bottom:1px solid var(--border);position:relative;z-index:2;margin-top:-40px;border-radius:var(--radius);box-shadow:var(--shadow)}
+.trust .container{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:22px}
+.trust-item{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--navy);font-size:1.05rem}
+.trust-item .dot{width:44px;height:44px;border-radius:12px;background:var(--blue-light);display:grid;place-items:center;color:var(--blue);flex-shrink:0}
+
+/* Services */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px}
+.card{
+  background:var(--white);border-radius:var(--radius);padding:32px 28px;box-shadow:var(--shadow);
+  border:1px solid var(--border);transition:transform .25s,box-shadow .25s
+}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.card .circle{
+  width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,var(--blue-light),#CFE9F7);
+  display:grid;place-items:center;margin-bottom:18px;color:var(--blue)
+}
+.card p{color:var(--muted);margin-bottom:18px}
+.card ul{list-style:none;margin-bottom:22px;display:grid;gap:8px}
+.card li::before{content:"✓ ";color:var(--orange);font-weight:800}
+.card a.more{font-weight:700;color:var(--navy)}
+.card .btn{width:100%}
+
+/* Why us */
+.points{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:32px}
+.point{display:flex;gap:18px;background:var(--cream);border-radius:var(--radius);padding:24px;border:1px solid var(--border)}
+.num{
+  flex-shrink:0;width:52px;height:52px;border-radius:14px;background:var(--navy);color:var(--white);
+  display:grid;place-items:center;font-weight:800;font-size:1.3rem
+}
+.point p{color:var(--muted)}
+
+/* Reviews */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px}
+.review{background:var(--white);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);border-left:6px solid var(--orange)}
+.stars{color:var(--orange);font-size:1.4rem;letter-spacing:3px;margin-bottom:10px}
+.review p{font-size:1.15rem;margin-bottom:14px}
+.review .who{font-weight:700;color:var(--navy)}
+.note{display:inline-block;margin-top:24px;background:#FFF4E6;color:#7A3E00;padding:10px 16px;border-radius:10px;font-weight:600;font-size:1rem}
+
+/* Service area / hours */
+.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:32px}
+.panel{background:var(--white);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);border:1px solid var(--border)}
+.panel ul{list-style:none;display:grid;gap:10px;margin-top:12px}
+.panel li{padding:12px 16px;border-radius:10px;background:var(--blue-light);font-weight:600}
+.hours-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);font-size:1.1rem}
+.hours-row:last-child{border:none}
+.hours-row strong{color:var(--orange-dark)}
+
+/* CTA banner */
+.cta-banner{
+  background:linear-gradient(120deg,var(--orange) 0%,#F4953B 100%);color:#111;border-radius:24px;
+  padding:48px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+  box-shadow:0 16px 40px rgba(232,112,26,.35)
+}
+.cta-banner h2{color:#111;margin:0 0 6px}
+.cta-banner p{color:#222}
+.cta-banner .btn-navy{font-size:1.25rem}
+
+/* Forms */
+.form-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-top:32px}
+form{background:var(--white);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);border:1px solid var(--border);display:grid;gap:18px}
+label{display:block;font-weight:700;color:var(--navy);margin-bottom:6px}
+input,select,textarea{
+  width:100%;font:inherit;font-size:1.1rem;padding:14px 16px;border-radius:12px;border:2px solid #B8C4D2;
+  background:#FBFCFE;color:var(--text);min-height:56px
+}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);outline:none;box-shadow:0 0 0 4px rgba(30,136,199,.2)}
+.field-error{color:#B3261E;font-weight:600;font-size:1rem;margin-top:6px;display:none}
+.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:#B3261E}
+.field.invalid .field-error{display:block}
+.hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+.form-status{padding:18px;border-radius:12px;font-weight:600;display:none}
+.form-status.ok{display:block;background:#E7F6EC;color:#0F5A2B;border:2px solid #7CC79A}
+.form-status.err{display:block;background:#FDECEA;color:#8A1D17;border:2px solid #E59A93}
+.emerg-note{background:#FFF4E6;border-left:6px solid var(--orange);padding:16px 18px;border-radius:12px;font-weight:600}
+.contact-card{display:grid;gap:16px}
+.contact-line{display:flex;gap:14px;align-items:center;background:var(--white);padding:18px;border-radius:14px;border:1px solid var(--border)}
+.contact-line .dot{width:48px;height:48px;border-radius:12px;background:var(--blue-light);display:grid;place-items:center;color:var(--blue);flex-shrink:0}
+
+/* Footer */
+footer{background:var(--navy);color:#DDE6F0;padding:56px 0 110px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px}
+footer h3{color:var(--white);font-size:1.2rem}
+footer a{color:#fff}
+footer ul{list-style:none;display:grid;gap:8px}
+.lic{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);font-size:1rem;color:#B8C6D6}
+
+/* Sticky mobile call bar */
+.mobile-call{
+  display:none;position:fixed;left:0;right:0;bottom:0;z-index:99;background:var(--navy);padding:10px 14px;
+  box-shadow:0 -6px 20px rgba(0,0,0,.2)
+}
+.mobile-call a{display:flex;justify-content:center;align-items:center;min-height:60px;border-radius:14px;background:var(--orange);color:#111;font-weight:800;text-decoration:none;font-size:1.2rem}
+
+/* Page visibility (single-page sections, all visible; nav scrolls) */
+.reveal{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* Responsive */
+@media (max-width:920px){
+  .hero-grid,.form-wrap,.area-grid,.foot-grid{grid-template-columns:1fr}
+  .cards,.reviews{grid-template-columns:1fr}
+  .points{grid-template-columns:1fr}
+  .trust .container{grid-template-columns:1fr 1fr}
+  .cta-banner{padding:32px}
+}
+@media (max-width:640px){
+  body{font-size:20px}
+  section{padding:52px 0}
+  .btn{width:100%}
+  .hero-actions{flex-direction:column}
+  .topbar .btn-header{display:none}
+  nav ul{width:100%;justify-content:space-between}
+  nav a{padding:0 10px;font-size:1rem}
+  .mobile-call{display:block}
+  body{padding-bottom:84px}
+  .trust .container{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="topbar">
+  <div class="container">
+    <a class="brand" href="#home">
+      <span class="brand-icon" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s-6 6.5-6 11a6 6 0 0 0 12 0c0-4.5-6-11-6-11z"/></svg>
+      </span>
+      Mike's Plumbing
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#home" class="active" data-nav="home">Home</a></li>
+        <li><a href="#services" data-nav="services">Services</a></li>
+        <li><a href="#about" data-nav="about">About</a></li>
+        <li><a href="#contact" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-call btn-header" href="tel:+16145550142" aria-label="Call Mike's Plumbing now at 614, 555, 0142">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+      Call Now: (614) 555-0142
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HOME / HERO -->
+<section id="home" class="hero" style="padding-bottom:150px">
+  <div class="container hero-grid">
+    <div>
+      <span class="tagline">Columbus, OH · Family-Owned Plumbers</span>
+      <h1>Columbus Plumbing Help, Day or Night</h1>
+      <p class="sub">Emergency repairs 24 hours a day, 7 days a week.</p>
+      <div class="hero-actions">
+        <a class="btn btn-call" href="tel:+16145550142">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call Now: (614) 555-0142
+        </a>
+        <a class="btn btn-outline" href="#contact">Get a Free Quote</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-label="Why homeowners call us">
+      <div class="big-number">24/7</div>
+      <p style="font-weight:600">Emergency plumbers ready to help</p>
+      <ul>
+        <li><span class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>Emergency repairs anytime</li>
+        <li><span class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>Water heaters installed and repaired</li>
+        <li><span class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>Drain cleaning</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="container">
+  <div class="trust" role="list" aria-label="Trust highlights">
+    <div class="container" style="padding:22px;max-width:none">
+      <div class="trust-item" role="listitem"><span class="dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6z"/></svg></span>Licensed &amp; Insured <span style="font-weight:500;color:var(--muted);font-size:.9rem">[CONFIRM WITH MIKE]</span></div>
+      <div class="trust-item" role="listitem"><span class="dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>24/7 Emergency</div>
+      <div class="trust-item" role="listitem"><span class="dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>Free Estimates <span style="font-weight:500;color:var(--muted);font-size:.9rem">[CONFIRM]</span></div>
+      <div class="trust-item" role="listitem"><span class="dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="10"/></svg></span>[Years] in Business <span style="font-weight:500;color:var(--muted);font-size:.9rem">[CONFIRM]</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <span class="eyebrow">Our Services</span>
+    <h2>Plumbing Help You Can Count On</h2>
+    <p class="lead">Pick the service you need. Every card has a button to call us right away.</p>
+    <div class="cards" id="serviceCards"></div>
+  </div>
+</section>
+
+<!-- ABOUT / WHY US -->
+<section id="about" class="alt">
+  <div class="container">
+    <span class="eyebrow">About Mike</span>
+    <h2>Why Columbus Homeowners Call Mike</h2>
+    <p class="lead">Mike's team answers the phone and tells you when we can arrive. No runaround.</p>
+    <div class="points">
+      <div class="point"><div class="num">1</div><div><h3>Real People Answer</h3><p>When you call, you talk to a real person who will help you right away.</p></div></div>
+      <div class="point"><div class="num">2</div><div><h3>Clear Arrival Times</h3><p>We tell you when we can arrive so you know what to expect.</p></div></div>
+      <div class="point"><div class="num">3</div><div><h3>Fair Pricing</h3><p>[CONFIRM WITH MIKE: pricing policy, e.g. free estimates or flat rates]</p></div></div>
+      <div class="point"><div class="num">4</div><div><h3>Local &amp; Trusted</h3><p>[CONFIRM WITH MIKE: years in business and owner story]</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section>
+  <div class="container">
+    <span class="eyebrow">Customer Reviews</span>
+    <h2>What Our Neighbors Say</h2>
+    <div class="reviews" id="reviewList"></div>
+    <span class="note">Sample reviews - replace with your real customer reviews</span>
+  </div>
+</section>
+
+<!-- SERVICE AREA / HOURS -->
+<section class="alt" id="area">
+  <div class="container">
+    <span class="eyebrow">Service Area &amp; Hours</span>
+    <h2>Serving Columbus and Nearby</h2>
+    <div class="area-grid">
+      <div class="panel">
+        <h3>Where We Work</h3>
+        <ul>
+          <li>Columbus, OH</li>
+          <li>[CONFIRM WITH MIKE: suburbs]</li>
+          <li>[CONFIRM WITH MIKE: ZIP codes]</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Hours</h3>
+        <div class="hours-row"><span>Emergency Repairs</span><strong>24/7</strong></div>
+        <div class="hours-row"><span>Office Hours</span><strong>[CONFIRM]</strong></div>
+        <div class="hours-row"><span>Weekends</span><strong>Emergency service available</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section style="padding-top:20px;padding-bottom:20px">
+  <div class="container">
+    <div class="cta-banner">
+      <div>
+        <h2>Water Emergency? Don't Wait.</h2>
+        <p style="font-size:1.2rem">Call now and speak with a real person.</p>
+      </div>
+      <a class="btn btn-navy" href="tel:+16145550142">Call Now: (614) 555-0142</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / REQUEST -->
+<section id="contact">
+  <div class="container form-wrap">
+    <div>
+      <span class="eyebrow">Contact Us</span>
+      <h2>Request Service or a Quote</h2>
+      <p class="lead" style="margin-bottom:18px">Fill out the short form and we'll call you back soon.</p>
+      <div class="emerg-note" role="note">For an emergency, please call. Don't wait for a form reply.</div>
+      <div class="contact-card" style="margin-top:24px">
+        <div class="contact-line"><span class="dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><div><strong>Phone</strong><br><a href="tel:+16145550142">(614) 555-0142</a></div></div>
+        <div class="contact-line"><span class="dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span><div><strong>Email</strong><br><a href="mailto:[CONFIRM EMAIL]">[CONFIRM EMAIL]</a></div></div>
+      </div>
+    </div>
+    <form id="leadForm" novalidate>
+      <div class="field">
+        <label for="f_name">Your Name *</label>
+        <input id="f_name" name="name" type="text" autocomplete="name" required>
+        <div class="field-error" id="e_name">Please enter your name.</div>
+      </div>
+      <div class="field">
+        <label for="f_phone">Phone Number *</label>
+        <input id="f_phone" name="phone" type="tel" autocomplete="tel" required>
+        <div class="field-error" id="e_phone">Please enter a phone number we can call.</div>
+      </div>
+      <div class="field">
+        <label for="f_email">Email (optional)</label>
+        <input id="f_email" name="email" type="email" autocomplete="email">
+        <div class="field-error" id="e_email">Please enter a valid email address.</div>
+      </div>
+      <div class="field">
+        <label for="f_service">What's going on? *</label>
+        <select id="f_service" name="service" required>
+          <option value="">Choose one...</option>
+          <option>Emergency Repair</option>
+          <option>Water Heater</option>
+          <option>Drain Cleaning</option>
+          <option>Other / Not Sure</option>
+        </select>
+        <div class="field-error" id="e_service">Please choose what's going on.</div>
+      </div>
+      <div class="field">
+        <label for="f_urgency">How urgent is it?</label>
+        <select id="f_urgency" name="urgency">
+          <option>Not urgent</option>
+          <option>Soon (today or tomorrow)</option>
+          <option>Emergency right now</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f_best">Best time to reach you</label>
+        <select id="f_best" name="best_time">
+          <option>Anytime</option>
+          <option>Morning</option>
+          <option>Afternoon</option>
+          <option>Evening</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f_msg">Tell us more (optional)</label>
+        <textarea id="f_msg" name="message"></textarea>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label for="f_hp">Leave this empty</label>
+        <input id="f_hp" name="website_hp" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <button class="btn btn-navy" type="submit">Send My Request</button>
+      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h3>Mike's Plumbing</h3>
+        <p>Emergency repairs, water heaters, and drain cleaning for Columbus, OH homeowners.</p>
+        <p style="margin-top:10px">Address: [CONFIRM WITH MIKE]</p>
+      </div>
+      <div>
+        <h3>Call Us</h3>
+        <ul><li><a href="tel:+16145550142">(614) 555-0142</a></li><li>24/7 Emergency Line</li></ul>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul><li><a href="#services">Services</a></li><li><a href="#about">About Mike</a></li><li><a href="#contact">Request Service</a></li></ul>
+      </div>
+    </div>
+    <div class="lic">License No.: [CONFIRM WITH MIKE] · Hours: Emergency service 24/7 · © <span id="year"></span> Mike's Plumbing</div>
+  </div>
+</footer>
+
+<div class="mobile-call">
+  <a href="tel:+16145550142">Call Now: (614) 555-0142</a>
+</div>
+
+<script>
+(function(){
+  // Year
+  var y = document.getElementById('year');
+  if (y) y.textContent = String(new Date().getFullYear());
+
+  // Services (built with JS)
+  var services = [
+    {t:'Emergency Repairs', d:'Burst pipes, leaks, and no water? We help any time, day or night.', items:['Burst and leaking pipes','No hot or cold water','Clogged or backed-up lines'], icon:'<svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg>', anchor:'#contact'},
+    {t:'Water Heaters', d:'Installation and repair for tank and tankless water heaters.', items:['New installation','Repairs and tune-ups','Replacement options'], icon:'<svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 7h4M10 12h4"/></svg>', anchor:'#contact'},
+    {t:'Drain Cleaning', d:'Slow or stopped drains cleared quickly so your home works again.', items:['Kitchen and bath drains','Main sewer lines','Slow drain fixes'], icon:'<svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M6 6v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6M10 11v5M14 11v5"/></svg>', anchor:'#contact'}
+  ];
+  var cards = document.getElementById('serviceCards');
+  if (cards) {
+    services.forEach(function(s){
+      var c = document.createElement('article');
+      c.className = 'card';
+      c.innerHTML = '<div class="circle" aria-hidden="true">'+s.icon+'</div>'
+        + '<h3></h3><p></p><ul></ul>'
+        + '<a class="btn btn-call" href="tel:+16145550142">Call Now</a>'
+        + '<p style="margin-top:14px"><a class="more" href="'+s.anchor+'">Request a quote for '+s.t.toLowerCase()+' &rarr;</a></p>';
+      c.querySelector('h3').textContent = s.t;
+      c.querySelector('p').textContent = s.d;
+      var ul = c.querySelector('ul');
+      s.items.forEach(function(i){ var li=document.createElement('li'); li.textContent=i; ul.appendChild(li); });
+      cards.appendChild(c);
+    });
+  }
+
+  // Reviews (sample)
+  var reviews = [
+    {q:'They came out in the middle of the night when our basement flooded. Friendly, fast, and fair.', w:'Sample Customer, Columbus'},
+    {q:'Our water heater was replaced in one day. Mike explained everything clearly.', w:'Sample Customer, Dublin'},
+    {q:'Our kitchen drain had been slow for weeks. Fixed in under an hour.', w:'Sample Customer, Westerville'}
+  ];
+  var rl = document.getElementById('reviewList');
+  if (rl) reviews.forEach(function(r){
+    var d = document.createElement('div');
+    d.className = 'review';
+    d.innerHTML = '<div class="stars" aria-label="5 out of 5 stars">★★★★★</div><p></p><div class="who"></div>';
+    d.querySelector('p').textContent = '"'+r.q+'"';
+    d.querySelector('.who').textContent = '- ' + r.w;
+    rl.appendChild(d);
+  });
+
+  // Active nav highlight on scroll
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('[data-nav]'));
+  var sectionMap = {home:'home', services:'services', about:'about', contact:'contact'};
+  function onScroll(){
+    var pos = window.scrollY + 140;
+    var current = 'home';
+    Object.keys(sectionMap).forEach(function(k){
+      var el = document.getElementById(sectionMap[k]);
+      if (el && el.offsetTop <= pos) current = k;
+    });
+    navLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('data-nav') === current);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // Form
+  var form = document.getElementById('leadForm');
+  var statusBox = document.getElementById('formStatus');
+  var BUSINESS = "Mike's Plumbing";
+  var WEBHOOK = 'https://venox.app.n8n.cloud/webhook/site-lead';
+
+  function setError(input, show){
+    var field = input.closest('.field');
+    if (!field) return;
+    field.classList.toggle('invalid', show);
+    input.setAttribute('aria-invalid', show ? 'true' : 'false');
+  }
+  function validate(){
+    var ok = true;
+    var name = form.elements['name'];
+    var phone = form.elements['phone'];
+    var email = form.elements['email'];
+    var service = form.elements['service'];
+
+    var nameOk = name.value.trim().length > 1;
+    setError(name, !nameOk); ok = ok && nameOk;
+
+    var phoneOk = phone.value.replace(/\D/g,'').length >= 7;
+    setError(phone, !phoneOk); ok = ok && phoneOk;
+
+    if (email.value.trim()) {
+      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+      setError(email, !emailOk); ok = ok && emailOk;
+    } else {
+      setError(email, false);
+    }
+
+    var serviceOk = service.value !== '';
+    setError(service, !serviceOk); ok = ok && serviceOk;
+
+    return ok;
+  }
+  function showStatus(type, msg){
+    statusBox.className = 'form-status ' + type;
+    statusBox.textContent = msg;
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    statusBox.className = 'form-status';
+    statusBox.textContent = '';
+    if (!validate()) {
+      showStatus('err', 'Please fix the highlighted fields and try again.');
+      var firstBad = form.querySelector('.field.invalid input, .field.invalid select');
+      if (firstBad) firstBad.focus();
+      return;
+    }
+    var data = new URLSearchParams(new FormData(form));
+    data.set('business', BUSINESS);
+    data.set('page', location.href);
+
+    try {
+      var record = {};
+      data.forEach(function(v,k){ record[k] = v; });
+      var now = new Date();
+      record.submittedAt = now.getFullYear() + '-' +
+        String(now.getMonth()+1).padStart(2,'0') + '-' +
+        String(now.getDate()).padStart(2,'0') + ' ' +
+        String(now.getHours()).padStart(2,'0') + ':' +
+        String(now.getMinutes()).padStart(2,'0');
+      var list = [];
+      try { list = JSON.parse(localStorage.getItem('leads') || '[]'); } catch(err){ list = []; }
+      if (!Array.isArray(list)) list = [];
+      list.push(record);
+      localStorage.setItem('leads', JSON.stringify(list));
+    } catch(err){}
+
+    fetch(WEBHOOK, {method:'POST', mode:'no-cors', body:data})
+      .then(function(){
+        showStatus('ok', "Thank you! We'll call you back soon.");
+        form.reset();
+      })
+      .catch(function(){
+        showStatus('err', 'We could not send your request. Please call us at (614) 555-0142 instead.');
+      });
+  });
+})();
+</script>
+</body>
+</html>
