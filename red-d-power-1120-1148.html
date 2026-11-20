@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Red D Power | Electrician in Statesboro, GA | (912) 871-7332</title>
+<meta name="description" content="Red D Power provides electrical services in Statesboro, GA. Call (912) 871-7332 or request a free quote.">
+<style>
+:root{
+  --accent:#c2410c;
+  --accent-soft:#fdf0e8;
+  --ink:#111827;
+  --muted:#4b5563;
+  --line:#e5e7eb;
+  --gray:#f7f7f8;
+  --white:#ffffff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:19px;
+  line-height:1.6;
+  color:var(--ink);
+  background:var(--white);
+}
+a{color:var(--accent)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--white);padding:10px 16px;border-radius:8px;z-index:200}
+.skip:focus{left:12px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:52px;padding:12px 26px;border-radius:10px;
+  font:inherit;font-weight:700;font-size:18px;text-decoration:none;
+  border:1px solid var(--accent);cursor:pointer;
+  transition:background .2s,color .2s,transform .2s;
+}
+.btn-solid{background:var(--accent);color:var(--white)}
+.btn-solid:hover{filter:brightness(.92)}
+.btn-outline{background:var(--white);color:var(--accent)}
+.btn-outline:hover{background:var(--accent-soft)}
+.btn-block{width:100%}
+.btn svg{width:20px;height:20px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* Header */
+header{
+  position:sticky;top:0;z-index:50;background:var(--white);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}
+.brand{font-weight:800;font-size:22px;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+.brand b{color:var(--accent)}
+nav{display:flex;align-items:center;gap:26px}
+nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:17px}
+nav a:hover{color:var(--accent)}
+
+/* Hero */
+.hero{padding:96px 0 88px;background:var(--white)}
+.hero h1{
+  font-size:clamp(32px,5vw,50px);line-height:1.1;letter-spacing:-.02em;
+  margin:0 0 20px;max-width:760px;
+}
+.hero p{font-size:20px;color:var(--muted);max-width:620px;margin:0 0 36px}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* Sections */
+section{padding:88px 0}
+.alt{background:var(--gray)}
+h2{font-size:clamp(26px,3.5vw,32px);letter-spacing:-.015em;margin:0 0 12px;line-height:1.2}
+.sub{color:var(--muted);margin:0 0 40px;max-width:620px}
+
+/* Services */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{
+  background:var(--white);border:1px solid var(--line);border-radius:12px;padding:28px;
+  transition:box-shadow .2s;
+}
+.card:hover{box-shadow:0 6px 18px rgba(17,24,39,.06)}
+.icon{
+  width:44px;height:44px;border-radius:12px;background:var(--accent-soft);
+  display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+}
+.icon svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:20px;margin:0 0 8px}
+.card p{margin:0;color:var(--muted);font-size:18px}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.step-n{
+  width:40px;height:40px;border-radius:50%;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:16px;background:var(--white);
+}
+.steps h3{font-size:20px;margin:0 0 6px}
+.steps p{margin:0;color:var(--muted);font-size:18px}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.big-phone{
+  display:inline-block;font-size:clamp(30px,4vw,40px);font-weight:800;
+  color:var(--accent);text-decoration:none;margin:12px 0 16px;min-height:48px;
+}
+.contact p{margin:0 0 10px}
+form{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:32px}
+label{display:block;font-weight:600;margin:0 0 6px;font-size:17px}
+.field{margin-bottom:18px}
+input,select,textarea{
+  width:100%;font:inherit;font-size:18px;padding:12px 14px;min-height:52px;
+  border:1px solid #cfd4dc;border-radius:10px;background:var(--white);color:var(--ink);
+}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:3px solid var(--accent-soft)}
+.err{color:#b42318;font-size:15px;margin-top:6px;display:none}
+.invalid input,.invalid select,.invalid textarea{border-color:#b42318}
+.invalid .err{display:block}
+.thanks{display:none;padding:20px;border-radius:12px;background:var(--accent-soft);font-weight:600;margin-top:16px}
+.fail{display:none;padding:16px;border-radius:12px;border:1px solid #b42318;margin-top:16px;font-size:17px}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:32px 0;background:var(--white)}
+.footer-inner{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;color:var(--muted);font-size:17px}
+footer a{color:var(--ink);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;min-height:48px}
+
+/* Mobile call bar */
+.call-bar{display:none}
+
+@media (max-width:860px){
+  .grid,.steps{grid-template-columns:1fr 1fr}
+  .contact{grid-template-columns:1fr;gap:40px}
+}
+@media (max-width:640px){
+  body{font-size:18px}
+  nav a.hide-m{display:none}
+  .grid,.steps{grid-template-columns:1fr}
+  .hero{padding:60px 0 56px}
+  section{padding:56px 0}
+  .hero p{font-size:18px}
+  .actions .btn{flex:1 1 100%}
+  .call-bar{
+    display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;
+    background:var(--white);padding:12px 16px;border-top:1px solid var(--line);
+    color:var(--white);
+  }
+  body{padding-bottom:84px}
+  footer{padding-bottom:110px}
+}
+</style>
+</head>
+<body>
+<div role="note" style="background:#111827;color:#ffffff;font:600 16px/1.4 system-ui,Segoe UI,Roboto,sans-serif;padding:6px 16px;text-align:center;position:relative;z-index:1000">Free website preview made for Red D Power by Zorlo &middot; Not the official site yet &middot; <a href="https://sites.zorlo.us/get-started.html" style="color:#fbbf24;display:inline-block;padding:12px 4px">Get your own</a></div>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">Red D <b>Power</b></a>
+    <nav aria-label="Main">
+      <a class="hide-m" href="#services">Services</a>
+      <a class="hide-m" href="#how">How it works</a>
+      <a class="hide-m" href="#contact">Contact</a>
+      <a class="btn btn-solid" href="tel:+19128717332" style="min-height:48px;padding:10px 18px;font-size:17px">Call (912) 871-7332</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div id="top"></div>
+
+  <section class="hero" style="padding-top:96px">
+    <div class="wrap">
+      <h1>Electrical Services in Statesboro, GA</h1>
+      <p>Clear communication, careful work and a straight answer on what your electrical project needs. Call or send us a request today.</p>
+      <div class="actions">
+        <a class="btn btn-solid" href="tel:+19128717332">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call Now
+        </a>
+        <a class="btn btn-outline" href="#contact">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="alt">
+    <div class="wrap">
+      <h2>Our Services</h2>
+      <p class="sub">Common electrical work for homes and small businesses.</p>
+      <div class="grid" id="services-grid"></div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>How It Works</h2>
+      <p class="sub">Getting started is simple.</p>
+      <div class="steps">
+        <div><div class="step-n">1</div><h3>Call or send the form</h3><p>Tell us what you need done.</p></div>
+        <div><div class="step-n">2</div><h3>We talk about your needs</h3><p>We explain the work and answer your questions.</p></div>
+        <div><div class="step-n">3</div><h3>We get the job done</h3><p>Our team completes the work carefully and safely.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="alt">
+    <div class="wrap contact">
+      <div>
+        <h2>Contact Us</h2>
+        <p class="sub" style="margin-bottom:8px">The fastest way to reach us is by phone.</p>
+        <a class="big-phone" href="tel:+19128717332">(912) 871-7332</a>
+        <p style="color:var(--muted)">Serving Statesboro and nearby</p>
+      </div>
+
+      <form id="lead-form" novalidate>
+        <div class="field" id="f-name">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+          <div class="err">Please enter your name.</div>
+        </div>
+        <div class="field" id="f-phone">
+          <label for="phone">Phone number</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+          <div class="err">Please enter a phone number.</div>
+        </div>
+        <div class="field" id="f-service">
+          <label for="service">What do you need?</label>
+          <select id="service" name="service" required>
+            <option value="">Choose a service</option>
+            <option>Electrical repair</option>
+            <option>Outlets and switches</option>
+            <option>Lighting and ceiling fans</option>
+            <option>Panel upgrade</option>
+            <option>Wiring</option>
+            <option>Other</option>
+          </select>
+          <div class="err">Please choose a service.</div>
+        </div>
+        <div class="field" id="f-message">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+          <div class="err">Please describe the job.</div>
+        </div>
+        <!-- honeypot -->
+        <div style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden" aria-hidden="true">
+          <label>Leave this empty<input type="text" name="website_hp" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <button class="btn btn-solid btn-block" type="submit" id="submit-btn">Request a Free Quote</button>
+        <div class="thanks" id="thanks" role="status">Thank you! We'll call you back soon.</div>
+        <div class="fail" id="fail" role="alert">We couldn't send your request. Please call <a href="tel:+19128717332">(912) 871-7332</a> instead.</div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span><strong style="color:var(--ink)">Red D Power</strong> · Statesboro, GA</span>
+    <a href="tel:+19128717332">(912) 871-7332</a>
+  </div>
+</footer>
+
+<a class="call-bar btn btn-solid" href="tel:+19128717332" aria-label="Call Red D Power at (912) 871-7332">Call (912) 871-7332</a>
+
+<script>
+(function(){
+  var services = [
+    {t:"Electrical Repairs", d:"Troubleshooting outages, flickering lights and tripping breakers.", i:'<path d="M13 2 3 14h9l-1 8 10-12h-9z"/>'},
+    {t:"Outlets & Switches", d:"New outlets, switch replacements and GFCI protection.", i:'<rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="10" cy="10" r="1"/><circle cx="14" cy="10" r="1"/><path d="M10 15h4"/>'},
+    {t:"Lighting & Ceiling Fans", d:"Indoor and outdoor lighting and ceiling fan installation.", i:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5V15h8v-1.5A6 6 0 0 0 12 3z"/>'},
+    {t:"Panel Upgrades", d:"Breaker panel replacement and upgrades for safe, reliable power.", i:'<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h2v4H9zM13 7h2v4h-2zM9 15h6"/>'},
+    {t:"Wiring & Rewiring", d:"Wiring for new construction, remodels and older systems.", i:'<path d="M4 7h6v4H4zM14 13h6v4h-6zM10 9h4v6"/>'},
+    {t:"Generator Hookups", d:"Standby generator connections and transfer switches.", i:'<rect x="3" y="7" width="18" height="10" rx="2"/><path d="M8 12h3l-1 2 2-4"/>'}
+  ];
+  var grid = document.getElementById('services-grid');
+  services.forEach(function(s){
+    var c = document.createElement('div');
+    c.className = 'card';
+    c.innerHTML = '<div class="icon"><svg viewBox="0 0 24 24">'+s.i+'</svg></div><h3></h3><p></p>';
+    c.querySelector('h3').textContent = s.t;
+    c.querySelector('p').textContent = s.d;
+    grid.appendChild(c);
+  });
+
+  var form = document.getElementById('lead-form');
+  var btn = document.getElementById('submit-btn');
+  var thanks = document.getElementById('thanks');
+  var fail = document.getElementById('fail');
+  var fields = ['name','phone','service','message'];
+
+  function validate(){
+    var ok = true;
+    fields.forEach(function(id){
+      var el = document.getElementById(id);
+      var wrap = document.getElementById('f-'+id);
+      var valid = el.value.trim() !== '';
+      wrap.classList.toggle('invalid', !valid);
+      if(!valid && ok){ el.focus(); }
+      if(!valid) ok = false;
+    });
+    return ok;
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    thanks.style.display = 'none';
+    fail.style.display = 'none';
+    if(!validate()) return;
+
+    var data = new URLSearchParams(new FormData(form));
+    data.set('business', 'Red D Power');
+    data.set('page', location.href);
+
+    try{
+      localStorage.setItem('redd_last_lead', JSON.stringify(Object.fromEntries(new FormData(form))));
+    }catch(err){}
+
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    fetch('https://venox.app.n8n.cloud/webhook/site-lead', {method:'POST', mode:'no-cors', body:data})
+      .then(function(){
+        thanks.style.display = 'block';
+        form.reset();
+      })
+      .catch(function(){
+        fail.style.display = 'block';
+      })
+      .finally(function(){
+        btn.disabled = false;
+        btn.textContent = 'Request a Free Quote';
+      });
+  });
+
+  fields.forEach(function(id){
+    document.getElementById(id).addEventListener('input', function(){
+      document.getElementById('f-'+id).classList.remove('invalid');
+    });
+  });
+})();
+</script>
+</body>
+</html>
