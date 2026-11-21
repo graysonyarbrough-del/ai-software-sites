@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A&amp;S Brothers Roofing | Roofing in Canton, GA</title>
+<meta name="description" content="A&amp;S Brothers Roofing in Canton, GA. Roof repair, roof replacement, leak repair, storm damage and inspections. Call (943) 219-2958.">
+<style>
+:root{
+  --accent:#b42318;
+  --accent-dark:#912018;
+  --accent-tint:#fef3f2;
+  --text:#111827;
+  --muted:#4b5563;
+  --border:#e5e7eb;
+  --soft:#f7f7f8;
+  --white:#ffffff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:19px;line-height:1.6;color:var(--text);background:var(--white);padding-bottom:0}
+img,svg{display:block}
+a{color:var(--accent)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;color:#000;padding:12px 16px;z-index:300}
+.skip:focus{left:8px;top:8px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 26px;border-radius:10px;font:inherit;font-weight:700;font-size:1.05rem;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn-solid{background:var(--accent);color:#fff}
+.btn-solid:hover{background:var(--accent-dark)}
+.btn-outline{background:#fff;color:var(--accent);border-color:var(--accent)}
+.btn-outline:hover{background:var(--accent-tint)}
+.btn svg{width:20px;height:20px}
+.btn:disabled{opacity:.7;cursor:wait}
+
+/* Header */
+header.site{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border)}
+.head{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:80px}
+.brand{font-weight:800;font-size:1.2rem;letter-spacing:-.01em;color:var(--text);text-decoration:none;min-height:48px;display:inline-flex;align-items:center}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a.link{color:var(--text);text-decoration:none;font-weight:600;min-height:48px;display:inline-flex;align-items:center}
+.nav a.link:hover{color:var(--accent)}
+@media(max-width:720px){.nav a.link{display:none}}
+
+/* Hero */
+.hero{padding:88px 0 80px}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.12;letter-spacing:-.02em;margin:0 0 20px;font-weight:800;max-width:720px}
+.hero p{font-size:1.2rem;color:var(--muted);max-width:600px;margin:0 0 36px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+
+section.block{padding:88px 0}
+section.block.soft{background:var(--soft)}
+h2{font-size:clamp(1.7rem,3.5vw,2.1rem);letter-spacing:-.015em;margin:0 0 12px;font-weight:800}
+.lead{color:var(--muted);margin:0 0 40px;max-width:640px}
+
+/* Services */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.grid3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid3{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:26px;transition:box-shadow .2s}
+.card:hover{box-shadow:0 6px 18px rgba(17,24,39,.06)}
+.icon{width:44px;height:44px;border-radius:12px;background:var(--accent-tint);color:var(--accent);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.icon svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.15rem;margin:0 0 6px;font-weight:700}
+.card p{margin:0;color:var(--muted);font-size:1rem}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;list-style:none;padding:0;margin:0;counter-reset:s}
+@media(max-width:800px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:s;border-top:2px solid var(--text);padding-top:20px}
+.steps li::before{content:counter(s);display:block;font-weight:800;color:var(--accent);font-size:1.3rem;margin-bottom:8px}
+.steps strong{display:block;font-size:1.1rem;margin-bottom:4px}
+.steps span{color:var(--muted);font-size:1rem}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+@media(max-width:860px){.contact{grid-template-columns:1fr;gap:40px}}
+.bigphone{display:inline-flex;align-items:center;min-height:52px;font-size:2rem;font-weight:800;color:var(--accent);text-decoration:none;margin:12px 0 8px}
+.contact p{color:var(--muted);margin:0 0 6px}
+form.quote{background:#fff;border:1px solid var(--border);border-radius:12px;padding:30px}
+.field{margin-bottom:18px}
+label{display:block;font-weight:700;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:1rem;padding:12px 14px;min-height:52px;border:1px solid #c7ccd4;border-radius:10px;background:#fff;color:var(--text)}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:2px solid var(--accent-tint)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.err{color:var(--accent);font-size:.95rem;margin-top:4px;display:none}
+.field.invalid .err{display:block}
+.field.invalid input,.field.invalid select{border-color:var(--accent)}
+.status{margin-top:16px;padding:14px 16px;border-radius:10px;display:none;font-weight:600}
+.status.ok{display:block;background:#ecfdf3;color:#067647}
+.status.fail{display:block;background:var(--accent-tint);color:var(--accent-dark)}
+form.quote .btn{width:100%}
+
+/* Footer */
+footer.site{border-top:1px solid var(--border);padding:32px 0;color:var(--muted);font-size:1rem}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:center}
+footer strong{color:var(--text)}
+footer a{color:var(--text);font-weight:700;text-decoration:none;min-height:48px;display:inline-flex;align-items:center}
+
+/* Mobile call bar */
+.callbar{display:none}
+@media(max-width:720px){
+  body{padding-bottom:84px}
+  .callbar{display:block;position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--border);padding:12px 16px;z-index:120}
+  .callbar a{display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;background:var(--accent);color:#fff;border-radius:10px;font-weight:700;text-decoration:none;font-size:1.1rem}
+  .hero{padding:56px 0 52px}
+  section.block{padding:56px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div role="note" style="background:#111827;color:#ffffff;font:600 16px/1.4 system-ui,Segoe UI,Roboto,sans-serif;padding:6px 16px;text-align:center;position:relative;z-index:1000">Free website preview made for A&amp;S Brothers Roofing by Zorlo &middot; Not the official site yet &middot; <a href="https://sites.zorlo.us/get-started.html" style="color:#fbbf24;display:inline-block;padding:12px 4px">Get your own</a></div>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="site">
+  <div class="wrap head">
+    <a class="brand" href="#top">A&amp;S Brothers Roofing</a>
+    <nav class="nav" aria-label="Main">
+      <a class="link" href="#services">Services</a>
+      <a class="link" href="#how">How it works</a>
+      <a class="link" href="#contact">Contact</a>
+      <a class="btn btn-solid" href="tel:+19432192958">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        Call (943) 219-2958
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap">
+      <h1>Roofing You Can Count On in Canton, GA</h1>
+      <p>Repairs, replacements, leak fixes and storm damage work from A&amp;S Brothers Roofing. Call us or request a free quote.</p>
+      <div class="btns">
+        <a class="btn btn-solid" href="tel:+19432192958">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call Now
+        </a>
+        <a class="btn btn-outline" href="#contact">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block soft" id="services">
+    <div class="wrap">
+      <h2>Our Services</h2>
+      <p class="lead">Straightforward roofing work for homes in Canton and nearby.</p>
+      <div class="grid3" id="serviceGrid"></div>
+    </div>
+  </section>
+
+  <section class="block" id="how">
+    <div class="wrap">
+      <h2>How It Works</h2>
+      <p class="lead">Getting started takes one call or one short form.</p>
+      <ol class="steps">
+        <li><strong>Call or send the form</strong><span>Tell us what is happening with your roof.</span></li>
+        <li><strong>We talk it through</strong><span>We ask a few questions to understand the job.</span></li>
+        <li><strong>We get the job done</strong><span>We complete the work and keep you informed.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block soft" id="contact">
+    <div class="wrap contact">
+      <div>
+        <h2>Talk to Us Today</h2>
+        <p>Call the phone number below and speak with us directly, or fill out the form and we will get back to you.</p>
+        <a class="bigphone" href="tel:+19432192958">(943) 219-2958</a>
+        <p>Serving Canton, GA and nearby</p>
+      </div>
+
+      <form class="quote" id="quoteForm" novalidate>
+        <div class="field" id="f-name">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+          <div class="err">Please enter your name.</div>
+        </div>
+        <div class="field" id="f-phone">
+          <label for="phone">Phone number</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+          <div class="err">Please enter a phone number.</div>
+        </div>
+        <div class="field" id="f-service">
+          <label for="service">What do you need?</label>
+          <select id="service" name="service" required>
+            <option value="">Choose a service</option>
+          </select>
+          <div class="err">Please choose a service.</div>
+        </div>
+        <div class="field">
+          <label for="message">Tell us more (optional)</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+        <div class="hp" aria-hidden="true">
+          <label for="website_hp">Leave this field empty</label>
+          <input id="website_hp" name="website_hp" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <button class="btn btn-solid" type="submit" id="submitBtn">Send My Request</button>
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap row">
+    <div><strong>A&amp;S Brothers Roofing</strong> · Canton, GA</div>
+    <div><a href="tel:+19432192958">(943) 219-2958</a></div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a href="tel:+19432192958">Call (943) 219-2958</a>
+</div>
+
+<script>
+(function(){
+  var BUSINESS = 'A&S Brothers Roofing';
+  var WEBHOOK = 'https://venox.app.n8n.cloud/webhook/site-lead';
+  var ICON = {
+    repair:'<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-2.5z"/>',
+    replace:'<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/>',
+    leak:'<path d="M12 2.7s-6 6.6-6 11a6 6 0 0 0 12 0c0-4.4-6-11-6-11z"/>',
+    storm:'<path d="M17.5 19a4.5 4.5 0 1 0-1-8.9A6 6 0 0 0 5 12a4 4 0 0 0 .5 7.9"/><path d="M13 13l-2 4h3l-2 4"/>',
+    inspect:'<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>',
+    tarp:'<path d="M4 20V8l8-5 8 5v12"/><path d="M9 20v-6h6v6"/>'
+  };
+  var services = [
+    {title:'Roof Repair', text:'Fixing damaged shingles, flashing and worn spots.', icon:'repair'},
+    {title:'Roof Replacement', text:'A complete new roof when repairs are no longer enough.', icon:'replace'},
+    {title:'Leak Repair', text:'Finding where water is getting in and stopping it.', icon:'leak'},
+    {title:'Storm & Hail Damage', text:'Inspection and repair after wind, hail or fallen limbs.', icon:'storm'},
+    {title:'Roof Inspections', text:'A clear look at the condition of your roof.', icon:'inspect'},
+    {title:'Emergency Tarping', text:'Temporary cover to protect your home until repairs are made.', icon:'tarp'}
+  ];
+
+  var grid = document.getElementById('serviceGrid');
+  var select = document.getElementById('service');
+  services.forEach(function(s){
+    var card = document.createElement('article');
+    card.className = 'card';
+    card.innerHTML = '<div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24">'+ICON[s.icon]+'</svg></div><h3></h3><p></p>';
+    card.querySelector('h3').textContent = s.title;
+    card.querySelector('p').textContent = s.text;
+    grid.appendChild(card);
+    var opt = document.createElement('option');
+    opt.value = s.title; opt.textContent = s.title;
+    select.appendChild(opt);
+  });
+  var other = document.createElement('option');
+  other.value = 'Not sure'; other.textContent = 'Not sure';
+  select.appendChild(other);
+
+  var form = document.getElementById('quoteForm');
+  var status = document.getElementById('status');
+  var btn = document.getElementById('submitBtn');
+
+  function validate(){
+    var ok = true;
+    ['name','phone','service'].forEach(function(id){
+      var el = document.getElementById(id);
+      var wrap = document.getElementById('f-'+id);
+      var valid = el.value.trim() !== '';
+      if(id === 'phone') valid = el.value.replace(/\D/g,'').length >= 7;
+      wrap.classList.toggle('invalid', !valid);
+      if(!valid) ok = false;
+    });
+    return ok;
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    status.className = 'status';
+    status.textContent = '';
+    if(!validate()){
+      var first = form.querySelector('.field.invalid input, .field.invalid select');
+      if(first) first.focus();
+      return;
+    }
+    var data = new URLSearchParams(new FormData(form));
+    data.set('business', BUSINESS);
+    data.set('page', location.href);
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    try{
+      var saved = JSON.parse(localStorage.getItem('leads') || '[]');
+      if(!Array.isArray(saved)) saved = [];
+      var obj = {};
+      data.forEach(function(v,k){ obj[k] = v; });
+      obj.date = new Date().toISOString();
+      saved.push(obj);
+      localStorage.setItem('leads', JSON.stringify(saved));
+    }catch(err){}
+
+    fetch(WEBHOOK, {method:'POST', mode:'no-cors', body:data})
+      .then(function(){
+        status.className = 'status ok';
+        status.textContent = "Thank you! We'll call you back soon.";
+        form.reset();
+      })
+      .catch(function(){
+        status.className = 'status fail';
+        status.textContent = 'Sorry, the form did not send. Please call us at (943) 219-2958.';
+      })
+      .then(function(){
+        btn.disabled = false;
+        btn.textContent = 'Send My Request';
+      });
+  });
+})();
+</script>
+</body>
+</html>
