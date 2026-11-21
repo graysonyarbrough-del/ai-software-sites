@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canton Electrician Company | Electrician in Canton, GA</title>
+<meta name="description" content="Canton Electrician Company provides electrical service in Canton, GA. Repairs, panel upgrades, lighting, EV chargers, generator hookups and more. Call (770) 758-3413.">
+<style>
+  :root{
+    --accent:#c2410c;
+    --accent-tint:#fff1e8;
+    --text:#111827;
+    --muted:#4b5563;
+    --border:#e5e7eb;
+    --bg-soft:#f7f7f8;
+    --white:#ffffff;
+    --radius-card:12px;
+    --radius-btn:10px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:19px;
+    line-height:1.6;
+    color:var(--text);
+    background:var(--white);
+    padding-bottom:84px;
+  }
+  a{color:var(--accent)}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+  .skip{position:absolute;left:-999px;top:auto;background:#fff;padding:12px;z-index:100}
+  .skip:focus{left:10px;top:10px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:var(--white);
+    border-bottom:1px solid var(--border);
+  }
+  header .wrap{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    min-height:72px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px;
+  }
+  .brand{font-weight:700;font-size:1.15rem;color:var(--text);text-decoration:none;letter-spacing:-0.01em}
+  .nav{display:flex;gap:24px;align-items:center}
+  .nav a{color:var(--muted);text-decoration:none;font-weight:600}
+  .nav a:hover{color:var(--text)}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    min-height:52px;padding:12px 24px;
+    font-size:1.1rem;font-weight:700;
+    border-radius:var(--radius-btn);
+    text-decoration:none;cursor:pointer;
+    border:1px solid transparent;
+    transition:background .2s,color .2s,border-color .2s;
+    font-family:inherit;
+  }
+  .btn-solid{background:var(--accent);color:#fff}
+  .btn-solid:hover{filter:brightness(.92)}
+  .btn-outline{background:transparent;color:var(--accent);border-color:var(--accent)}
+  .btn-outline:hover{background:var(--accent-tint)}
+  .btn-block{width:100%}
+
+  /* Hero */
+  .hero{padding:88px 0 80px;background:var(--white)}
+  .hero h1{
+    font-size:clamp(32px,5vw,52px);
+    line-height:1.12;
+    letter-spacing:-0.02em;
+    margin:0 0 18px;
+    max-width:760px;
+  }
+  .hero p{font-size:1.2rem;color:var(--muted);max-width:620px;margin:0 0 32px}
+  .btn-row{display:flex;flex-wrap:wrap;gap:14px}
+
+  /* Sections */
+  section{padding:88px 0}
+  section.soft{background:var(--bg-soft)}
+  h2{
+    font-size:clamp(26px,3.4vw,30px);
+    letter-spacing:-0.015em;
+    margin:0 0 12px;line-height:1.2;
+  }
+  .lead{color:var(--muted);margin:0 0 40px;max-width:620px}
+
+  /* Services */
+  .grid3{display:grid;gap:24px;grid-template-columns:repeat(3,1fr)}
+  .card{
+    background:var(--white);
+    border:1px solid var(--border);
+    border-radius:var(--radius-card);
+    padding:28px;
+    transition:box-shadow .2s;
+  }
+  .card:hover{box-shadow:0 6px 18px rgba(17,24,39,.06)}
+  .icon{
+    width:44px;height:44px;border-radius:10px;
+    background:var(--accent-tint);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:18px;
+  }
+  .icon svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+  .card h3{font-size:1.15rem;margin:0 0 8px;letter-spacing:-0.01em}
+  .card p{margin:0;color:var(--muted);font-size:1rem}
+
+  /* Steps */
+  .steps{display:grid;gap:24px;grid-template-columns:repeat(3,1fr);counter-reset:step}
+  .step{padding:4px 0}
+  .step-num{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:36px;height:36px;border-radius:50%;
+    border:1px solid var(--border);
+    font-weight:700;color:var(--text);margin-bottom:14px;
+  }
+  .step h3{font-size:1.15rem;margin:0 0 6px}
+  .step p{margin:0;color:var(--muted);font-size:1rem}
+
+  /* Contact */
+  .contact{display:grid;gap:56px;grid-template-columns:1fr 1fr;align-items:start}
+  .phone-big{
+    display:inline-block;font-size:clamp(28px,4vw,38px);
+    font-weight:700;color:var(--accent);text-decoration:none;
+    margin:8px 0 12px;letter-spacing:-0.01em;
+    min-height:48px;line-height:48px;
+  }
+  .contact .area{color:var(--muted);margin:0}
+  form.quote{display:grid;gap:16px}
+  .field label{display:block;font-weight:600;margin-bottom:6px;font-size:1rem}
+  .field input,.field select,.field textarea{
+    width:100%;font-size:1.05rem;font-family:inherit;
+    padding:14px;border:1px solid #cbd5e1;border-radius:var(--radius-btn);
+    background:#fff;color:var(--text);min-height:52px;
+  }
+  .field textarea{min-height:110px;resize:vertical}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:3px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+  .field .err{color:#b42318;font-size:.95rem;margin-top:6px;display:none}
+  .field.invalid .err{display:block}
+  .field.invalid input,.field.invalid select,.field.invalid textarea{border-color:#b42318}
+  .hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+  .notice{padding:16px 18px;border-radius:var(--radius-btn);font-size:1.05rem;display:none}
+  .notice.ok{display:block;background:#ecfdf3;color:#067647;border:1px solid #abefc6}
+  .notice.fail{display:block;background:#fef3f2;color:#b42318;border:1px solid #fecdca}
+
+  /* Footer */
+  footer{border-top:1px solid var(--border);padding:32px 0;color:var(--muted);font-size:1rem}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+  footer strong{color:var(--text)}
+  footer a{color:var(--text);text-decoration:none;font-weight:600;display:inline-flex;align-items:center;min-height:48px}
+
+  /* Mobile call bar */
+  .callbar{
+    display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;
+    background:var(--white);border-top:1px solid var(--border);padding:12px 16px;
+  }
+  .callbar a{
+    display:flex;align-items:center;justify-content:center;
+    min-height:56px;background:var(--accent);color:#fff;
+    font-weight:700;font-size:1.1rem;text-decoration:none;border-radius:var(--radius-btn);
+  }
+
+  @media (max-width:900px){
+    .grid3,.steps{grid-template-columns:repeat(2,1fr)}
+    .contact{grid-template-columns:1fr;gap:40px}
+  }
+  @media (max-width:720px){
+    body{font-size:19px}
+    section{padding:56px 0}
+    .hero{padding:56px 0 52px}
+    .nav{display:none}
+    .callbar{display:block}
+    header .btn{display:none}
+    .grid3,.steps{grid-template-columns:1fr}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{transition:none !important}
+  }
+</style>
+</head>
+<body>
+<div role="note" style="background:#111827;color:#ffffff;font:600 16px/1.4 system-ui,Segoe UI,Roboto,sans-serif;padding:6px 16px;text-align:center;position:relative;z-index:1000">Free website preview made for Canton Electrician Company by Zorlo &middot; Not the official site yet &middot; <a href="https://sites.zorlo.us/get-started.html" style="color:#fbbf24;display:inline-block;padding:12px 4px">Get your own</a></div>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">Canton Electrician Company</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-solid" href="tel:+17707583413">Call (770) 758-3413</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hero" id="top">
+    <div class="wrap">
+      <h1>Electricians in Canton, GA</h1>
+      <p>Repairs, upgrades and installations for homes and businesses. Call us or send a request and we will get back to you.</p>
+      <div class="btn-row">
+        <a class="btn btn-solid" href="tel:+17707583413">Call Now</a>
+        <a class="btn btn-outline" href="#contact">Request a Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="services" class="soft">
+    <div class="wrap">
+      <h2>Our Services</h2>
+      <p class="lead">Common electrical work for homes and businesses in Canton.</p>
+      <div class="grid3" id="serviceGrid"></div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>How It Works</h2>
+      <p class="lead">Getting help is simple.</p>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><h3>Call or send the form</h3><p>Tell us what you need.</p></div>
+        <div class="step"><div class="step-num">2</div><h3>We talk about the job</h3><p>We confirm the details and next steps with you.</p></div>
+        <div class="step"><div class="step-num">3</div><h3>We get the job done</h3><p>Careful, clean work from start to finish.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="soft">
+    <div class="wrap contact">
+      <div>
+        <h2>Contact Us</h2>
+        <p class="lead" style="margin-bottom:8px">Call us directly or fill out the form and we will reach out.</p>
+        <a class="phone-big" href="tel:+17707583413">(770) 758-3413</a>
+        <p class="area">Serving Canton, GA and nearby.</p>
+      </div>
+
+      <div>
+        <form class="quote" id="quoteForm" novalidate>
+          <div class="field" data-field="name">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+            <div class="err">Please enter your name.</div>
+          </div>
+          <div class="field" data-field="phone">
+            <label for="f-phone">Phone number</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+            <div class="err">Please enter a phone number.</div>
+          </div>
+          <div class="field" data-field="service">
+            <label for="f-service">What do you need?</label>
+            <select id="f-service" name="service" required>
+              <option value="">Choose a service</option>
+              <option>Electrical repair</option>
+              <option>Panel upgrade</option>
+              <option>Outlets and switches</option>
+              <option>Lighting</option>
+              <option>Ceiling fan</option>
+              <option>EV charger</option>
+              <option>Generator hookup</option>
+              <option>Rewiring</option>
+              <option>Other</option>
+            </select>
+            <div class="err">Please choose a service.</div>
+          </div>
+          <div class="field" data-field="message">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="message" required></textarea>
+            <div class="err">Please describe the job.</div>
+          </div>
+          <div class="hp" aria-hidden="true">
+            <label>Leave this empty<input type="text" name="website_hp" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <button class="btn btn-solid btn-block" type="submit" id="submitBtn">Send Request</button>
+          <div class="notice" id="notice" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Canton Electrician Company</strong><br>Canton, GA</div>
+    <div><a href="tel:+17707583413">(770) 758-3413</a></div>
+    <div>&copy; <span id="yr"></span> Canton Electrician Company</div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+17707583413">Call (770) 758-3413</a></div>
+
+<script>
+(function(){
+  var yrEl = document.getElementById('yr');
+  if(yrEl) yrEl.textContent = new Date().getFullYear();
+
+  var icons = {
+    wrench:'<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.2-2.2 2.5-2.5z"/>',
+    panel:'<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h6M9 12h6M9 17h3"/>',
+    plug:'<path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0z"/><path d="M12 18v4"/>',
+    bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/>',
+    fan:'<circle cx="12" cy="12" r="2"/><path d="M12 10c0-4 2-6 4-6s2 3 0 5M14 12c4 0 6 2 6 4s-3 2-5 0M12 14c0 4-2 6-4 6s-2-3 0-5M10 12c-4 0-6-2-6-4s3-2 5 0"/>',
+    charger:'<rect x="5" y="3" width="10" height="18" rx="2"/><path d="M10 7l-2 4h3l-2 4"/><path d="M17 8h2v6"/>',
+    gen:'<rect x="3" y="8" width="18" height="10" rx="2"/><path d="M7 8V5h10v3M7 13h4M15 13h2"/>',
+    rewire:'<path d="M4 6h6v6H4zM14 12h6v6h-6zM10 9h4M17 12V9"/>',
+    shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>',
+    smoke:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2"/>',
+    check:'<path d="M5 12l4 4 10-10"/>'
+  };
+  function svg(k){return '<svg viewBox="0 0 24 24" aria-hidden="true">'+(icons[k]||icons.check)+'</svg>';}
+
+  var services = [
+    {t:'Electrical Repairs', d:'Troubleshooting and fixing outlets, switches, breakers and wiring.', i:'wrench'},
+    {t:'Panel Upgrades', d:'Replacing old or overloaded breaker boxes with modern panels.', i:'panel'},
+    {t:'Outlets & Switches', d:'New outlets, GFCI protection, USB outlets and dimmers.', i:'plug'},
+    {t:'Lighting', d:'Indoor, outdoor, recessed and security lighting installation.', i:'bulb'},
+    {t:'Ceiling Fans', d:'Installation and replacement, with new wiring where needed.', i:'fan'},
+    {t:'EV Chargers', d:'Home charging station installation for electric vehicles.', i:'charger'}
+  ];
+  var grid = document.getElementById('serviceGrid');
+  services.forEach(function(s){
+    var el = document.createElement('div');
+    el.className = 'card';
+    el.innerHTML = '<div class="icon">'+svg(s.i)+'</div><h3></h3><p></p>';
+    el.querySelector('h3').textContent = s.t;
+    el.querySelector('p').textContent = s.d;
+    grid.appendChild(el);
+  });
+
+  var form = document.getElementById('quoteForm');
+  var notice = document.getElementById('notice');
+  var submitBtn = document.getElementById('submitBtn');
+
+  function validate(){
+    var ok = true;
+    form.querySelectorAll('.field').forEach(function(f){
+      var input = f.querySelector('input,select,textarea');
+      var valid = input.value.trim() !== '';
+      if(input.type === 'tel' && valid){
+        valid = input.value.replace(/\D/g,'').length >= 7;
+      }
+      f.classList.toggle('invalid', !valid);
+      if(!valid){ ok = false; }
+    });
+    return ok;
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    notice.className = 'notice';
+    notice.textContent = '';
+    if(!validate()){
+      var first = form.querySelector('.field.invalid input,.field.invalid select,.field.invalid textarea');
+      if(first) first.focus();
+      return;
+    }
+    var fd = new FormData(form);
+    var data = new URLSearchParams(fd);
+    data.set('business', 'Canton Electrician Company');
+    data.set('page', location.href);
+
+    var record = {};
+    fd.forEach(function(v,k){ if(k !== 'website_hp') record[k] = v; });
+    var now = new Date();
+    record.date = now.getFullYear() + '-' +
+      String(now.getMonth()+1).padStart(2,'0') + '-' +
+      String(now.getDate()).padStart(2,'0');
+    try{
+      var list = JSON.parse(localStorage.getItem('leads') || '[]');
+      if(!Array.isArray(list)) list = [];
+      list.push(record);
+      localStorage.setItem('leads', JSON.stringify(list));
+    }catch(err){}
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    fetch('https://venox.app.n8n.cloud/webhook/site-lead', {method:'POST', mode:'no-cors', body:data})
+      .then(function(){
+        notice.className = 'notice ok';
+        notice.textContent = "Thank you! We'll call you back soon.";
+        form.reset();
+      })
+      .catch(function(){
+        notice.className = 'notice fail';
+        notice.textContent = 'Sorry, we could not send your request. Please call us at (770) 758-3413.';
+      })
+      .finally(function(){
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Request';
+      });
+  });
+
+  form.querySelectorAll('input,select,textarea').forEach(function(input){
+    input.addEventListener('input', function(){
+      var f = input.closest('.field');
+      if(f && input.value.trim() !== '') f.classList.remove('invalid');
+    });
+  });
+})();
+</script>
+</body>
+</html>
