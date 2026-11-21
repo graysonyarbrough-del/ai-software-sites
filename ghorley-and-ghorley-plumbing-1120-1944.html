@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ghorley &amp; Ghorley Plumbing | Plumber in Canton, GA</title>
+<meta name="description" content="Ghorley &amp; Ghorley Plumbing in Canton, GA. Drain cleaning, leak repair, water heaters, toilets, faucets and more. Call (770) 479-8174.">
+<style>
+:root{
+  --accent:#1d4ed8;
+  --accent-dark:#1e40af;
+  --accent-tint:#eff4ff;
+  --text:#111827;
+  --muted:#4b5563;
+  --border:#e5e7eb;
+  --soft:#f7f7f8;
+  --white:#ffffff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:19px;
+  line-height:1.6;
+  color:var(--text);
+  background:var(--white);
+  padding-bottom:84px;
+}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:0;background:var(--text);color:var(--white);padding:12px 16px;z-index:100}
+.skip:focus{left:8px;top:8px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+section.alt{background:var(--soft)}
+h1,h2,h3{letter-spacing:-0.02em;margin:0;line-height:1.2}
+h1{font-size:clamp(32px,5vw,52px);font-weight:800}
+h2{font-size:clamp(26px,3.5vw,30px);font-weight:800;margin-bottom:12px}
+h3{font-size:20px;font-weight:700;margin-bottom:8px}
+.lead{color:var(--muted);margin:0 0 32px;max-width:640px}
+
+/* Header */
+header{position:sticky;top:0;z-index:40;background:var(--white);border-bottom:1px solid var(--border)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.brand{font-weight:800;font-size:20px;color:var(--text);text-decoration:none}
+nav ul{list-style:none;display:flex;gap:24px;margin:0;padding:0}
+nav a{color:var(--text);text-decoration:none;font-weight:600;display:inline-flex;align-items:center;min-height:48px}
+nav a:hover{color:var(--accent)}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:56px;padding:12px 26px;border-radius:10px;
+  font:inherit;font-weight:700;font-size:18px;text-decoration:none;
+  border:1px solid var(--accent);cursor:pointer;
+  transition:background .2s,color .2s,border-color .2s;
+}
+.btn-solid{background:var(--accent);color:var(--white)}
+.btn-solid:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+.btn-outline{background:var(--white);color:var(--accent)}
+.btn-outline:hover{background:var(--accent-tint)}
+.btn-block{width:100%}
+.btn svg{width:22px;height:22px;flex:none}
+
+/* Hero */
+.hero{padding:96px 0 88px}
+.hero p{font-size:21px;color:var(--muted);max-width:600px;margin:20px 0 36px}
+.hero .btns{display:flex;flex-wrap:wrap;gap:14px}
+
+/* Icons */
+.icon{
+  width:44px;height:44px;border-radius:12px;background:var(--accent-tint);
+  color:var(--accent);display:inline-flex;align-items:center;justify-content:center;margin-bottom:18px;
+}
+.icon svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+
+/* Services */
+.grid{display:grid;gap:24px;grid-template-columns:repeat(3,1fr)}
+.card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:28px;transition:box-shadow .2s}
+.card:hover{box-shadow:0 4px 14px rgba(17,24,39,.06)}
+.card p{margin:0;color:var(--muted);font-size:17px}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;list-style:none;padding:0;margin:0;counter-reset:s}
+.steps li{counter-increment:s;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:28px}
+.steps li::before{
+  content:counter(s);display:inline-flex;align-items:center;justify-content:center;
+  width:36px;height:36px;border-radius:50%;background:var(--text);color:var(--white);
+  font-weight:700;margin-bottom:16px;
+}
+.steps p{margin:0;color:var(--muted)}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.big-phone{display:inline-block;font-size:32px;font-weight:800;text-decoration:none;color:var(--accent);margin:12px 0 8px;min-height:48px}
+.form{display:grid;gap:18px;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:32px}
+label{display:block;font-weight:600;margin-bottom:6px}
+input,select,textarea{
+  width:100%;font:inherit;font-size:18px;padding:12px 14px;min-height:52px;
+  border:1px solid #cfd5dd;border-radius:10px;background:var(--white);color:var(--text);
+}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--accent-tint);border-color:var(--accent)}
+textarea{min-height:120px;resize:vertical}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.err{color:#b42318;font-size:16px;margin-top:4px;display:none}
+.invalid input,.invalid select,.invalid textarea{border-color:#b42318}
+.invalid .err{display:block}
+.status{font-size:18px;font-weight:600;padding:14px 16px;border-radius:10px;display:none}
+.status.ok{display:block;background:#ecfdf3;color:#067647}
+.status.fail{display:block;background:#fef3f2;color:#b42318}
+
+/* Footer */
+footer{border-top:1px solid var(--border);padding:32px 0;color:var(--muted)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+footer strong{color:var(--text)}
+footer a{color:var(--text);font-weight:600;display:inline-flex;align-items:center;min-height:48px}
+
+/* Mobile call bar */
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--white);padding:12px 16px;border-top:1px solid var(--border)}
+
+@media (max-width:880px){
+  .grid,.steps{grid-template-columns:1fr 1fr}
+  .contact{grid-template-columns:1fr;gap:40px}
+}
+@media (max-width:640px){
+  body{font-size:18px;padding-bottom:92px}
+  section{padding:56px 0}
+  .hero{padding:56px 0 52px}
+  .hero p{font-size:19px}
+  nav{display:none}
+  .grid,.steps{grid-template-columns:1fr}
+  .btn{width:100%}
+  .hero .btns .btn{width:100%}
+  .foot{flex-direction:column;align-items:flex-start}
+  .callbar{display:block}
+  .top .btn-solid.desk{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<div role="note" style="background:#111827;color:#ffffff;font:600 16px/1.4 system-ui,Segoe UI,Roboto,sans-serif;padding:6px 16px;text-align:center;position:relative;z-index:1000">Free website preview made for Ghorley &amp; Ghorley Plumbing by Zorlo &middot; Not the official site yet &middot; <a href="https://sites.zorlo.us/get-started.html" style="color:#fbbf24;display:inline-block;padding:12px 4px">Get your own</a></div>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header>
+  <div class="wrap top">
+    <a class="brand" href="#top">Ghorley &amp; Ghorley Plumbing</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-solid desk" href="tel:+17704798174" aria-label="Call Ghorley and Ghorley Plumbing at 770-479-8174">Call (770) 479-8174</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top" style="padding-top:96px">
+  <div class="wrap">
+    <h1>Plumbing repairs in Canton, GA</h1>
+    <p>Leaks, clogs, water heaters and more. Call us and talk with a real person about your plumbing problem.</p>
+    <div class="btns">
+      <a class="btn btn-solid" href="tel:+17704798174">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        Call Now
+      </a>
+      <a class="btn btn-outline" href="#contact">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="alt">
+  <div class="wrap">
+    <h2>Our services</h2>
+    <p class="lead">Residential plumbing repair, installation and replacement.</p>
+    <div class="grid" id="serviceGrid"></div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="lead">Simple steps from your first call to a finished job.</p>
+    <ol class="steps">
+      <li><p>Call us or send the form.</p></li>
+      <li><p>We talk about what you need.</p></li>
+      <li><p>We get the job done.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="wrap contact">
+    <div>
+      <h2>Talk to us today</h2>
+      <p class="lead">Prefer to talk? Call us directly, or send a request and we will get back to you.</p>
+      <a class="big-phone" href="tel:+17704798174">(770) 479-8174</a>
+      <p class="lead" style="margin-top:12px">Serving Canton and nearby.</p>
+    </div>
+
+    <form class="form" id="leadForm" novalidate>
+      <div id="fieldName">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+        <div class="err">Please enter your name.</div>
+      </div>
+      <div id="fieldPhone">
+        <label for="phone">Phone number</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+        <div class="err">Please enter a phone number.</div>
+      </div>
+      <div>
+        <label for="service">What do you need help with?</label>
+        <select id="service" name="service">
+          <option>Drain cleaning</option>
+          <option>Leak repair</option>
+          <option>Water heater</option>
+          <option>Toilet</option>
+          <option>Faucet or sink</option>
+          <option>Garbage disposal</option>
+          <option>Pipe repair</option>
+          <option>Sewer line</option>
+          <option>Not sure</option>
+        </select>
+      </div>
+      <div>
+        <label for="message">Message (optional)</label>
+        <textarea id="message" name="message"></textarea>
+      </div>
+      <input class="hp" type="text" name="website_hp" tabindex="-1" aria-hidden="true" autocomplete="off">
+      <button class="btn btn-solid btn-block" type="submit">Send my request</button>
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><strong>Ghorley &amp; Ghorley Plumbing</strong><br>Canton, GA</div>
+    <div><a href="tel:+17704798174">(770) 479-8174</a></div>
+    <div>&copy; <span id="yr"></span></div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-solid btn-block" href="tel:+17704798174" aria-label="Call Ghorley and Ghorley Plumbing now">Tap to Call (770) 479-8174</a>
+</div>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  var icons = {
+    drain:'<path d="M4 6h16M6 6v4a6 6 0 0 0 12 0V6M12 16v5"/>',
+    leak:'<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',
+    heater:'<rect x="6" y="3" width="12" height="18" rx="3"/><path d="M10 8h4M10 12h4"/>',
+    toilet:'<path d="M7 3h10v6H7zM5 11h14v3a6 6 0 0 1-6 6h-2a6 6 0 0 1-6-6z"/>',
+    faucet:'<path d="M6 4v8h8M14 12v3a3 3 0 0 0 3 3h1"/>',
+    pipe:'<path d="M4 10h16v4H4zM8 10V6M16 14v4"/>'
+  };
+  var services = [
+    {t:'Drain cleaning', d:'Clogged sinks, tubs, showers and drains cleared.', i:'drain'},
+    {t:'Leak repair', d:'Dripping pipes, faucets and hidden leaks fixed.', i:'leak'},
+    {t:'Water heaters', d:'Repair and replacement of water heaters.', i:'heater'},
+    {t:'Toilet repair', d:'Running, clogged or leaking toilets repaired.', i:'toilet'},
+    {t:'Faucets & sinks', d:'Faucet installation, sink repair and fixtures.', i:'faucet'},
+    {t:'Pipe repair', d:'Broken or corroded pipes repaired or replaced.', i:'pipe'}
+  ];
+  var grid = document.getElementById('serviceGrid');
+  services.forEach(function(s){
+    var c = document.createElement('div');
+    c.className = 'card';
+    c.innerHTML = '<div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true">'+icons[s.i]+'</svg></div><h3></h3><p></p>';
+    c.querySelector('h3').textContent = s.t;
+    c.querySelector('p').textContent = s.d;
+    grid.appendChild(c);
+  });
+
+  var form = document.getElementById('leadForm');
+  var status = document.getElementById('status');
+  var nameInput = document.getElementById('name');
+  var phoneInput = document.getElementById('phone');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var fn = document.getElementById('fieldName');
+    var fp = document.getElementById('fieldPhone');
+    fn.classList.toggle('invalid', !nameInput.value.trim());
+    fp.classList.toggle('invalid', phoneInput.value.replace(/\D/g,'').length < 7);
+    if(fn.classList.contains('invalid') || fp.classList.contains('invalid')){
+      (fn.classList.contains('invalid') ? nameInput : phoneInput).focus();
+      return;
+    }
+
+    var data = new URLSearchParams(new FormData(form));
+    data.set('business', 'Ghorley & Ghorley Plumbing');
+    data.set('page', location.href);
+
+    try{
+      localStorage.setItem('lastLead', JSON.stringify(Object.fromEntries(data)));
+    }catch(err){}
+
+    var btn = form.querySelector('button');
+    btn.disabled = true;
+    fetch('https://venox.app.n8n.cloud/webhook/site-lead', {method:'POST', mode:'no-cors', body:data})
+      .then(function(){
+        status.className = 'status ok';
+        status.textContent = 'Thank you! We\'ll call you back soon.';
+        form.reset();
+      })
+      .catch(function(){
+        status.className = 'status fail';
+        status.textContent = 'Sorry, we could not send your request. Please call (770) 479-8174.';
+      })
+      .then(function(){ btn.disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>
