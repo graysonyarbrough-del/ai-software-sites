@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cloud Chaser Vape & Smoke | Cartersville, GA</title>
+<meta name="description" content="Cloud Chaser Vape & Smoke has two shops in Cartersville, GA: West Ave and Burnt Hickory Rd. Disposable vapes, e-juice, hemp and THCA, glass, hookah, kratom and THC drinks. Open 7 days.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: loud, late-night, neon-lit shop
+   IDEA: the shop's own neon signs and purple-to-blue storefront sign
+   PICTURE: real photos of the walls and cases, big and edge to edge
+   COLOUR+TYPE: night ink, sign purple/blue, neon pink + neon yellow; Anton + Inter Tight
+   LAYOUT: full hero, deals strip, product grid, gallery, deals band, reviews, visit */
+:root{
+  --ink:#0a0912;--ink2:#141222;--line:#2a2640;
+  --text:#f1effa;--mute:#a19cba;
+  --pink:#ff3fa4;--yellow:#ffe24a;--purple:#8a4dff;--blue:#3f7bff;--green:#7ee04a;
+}
+*{box-sizing:border-box;margin:0;padding:0;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--ink);color:var(--text);font-family:"Inter Tight",system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+.display{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.95}
+.wrap{max-width:1200px;margin:0 auto;padding:0 22px}
+.neon-p{color:var(--pink);text-shadow:0 0 18px rgba(255,63,164,.65)}
+.neon-y{color:var(--yellow);text-shadow:0 0 18px rgba(255,226,74,.55)}
+.grad{background:linear-gradient(90deg,#b07cff,#5d8dff);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* age gate */
+#gate{position:fixed;inset:0;z-index:100;background:rgba(6,5,12,.95);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;padding:24px}
+#gate.hide{display:none}
+.gate-card{max-width:420px;text-align:center;border:1px solid var(--line);background:var(--ink2);border-radius:20px;padding:36px 28px}
+.gate-card h2{font-size:46px;margin:8px 0 10px}
+.gate-card p{color:var(--mute);margin-bottom:24px}
+.gate-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+#gate-no-msg{display:none;margin-top:16px;color:#ff8a8a;font-size:14px}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+nav.solid{background:rgba(10,9,18,.88);backdrop-filter:blur(12px);border-color:var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:34px;flex:none}
+.brand b{font-family:Anton,sans-serif;font-weight:400;font-size:20px;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.brand b small{display:block;font-size:11px;letter-spacing:.12em;color:var(--mute);font-family:"Inter Tight",sans-serif;font-weight:700}
+.nav-links{display:flex;gap:24px;align-items:center;font-size:14px;font-weight:600}
+.nav-links a{text-decoration:none;opacity:.85}
+.nav-links a:hover{opacity:1}
+@media(max-width:780px){.nav-links a:not(.btn){display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:15px;text-decoration:none;border-radius:999px;padding:13px 22px;min-height:44px;border:0;cursor:pointer;font-family:inherit;transition:transform .15s,box-shadow .15s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.btn-main{background:var(--pink);color:#fff;box-shadow:0 0 24px rgba(255,63,164,.45)}
+.btn-ghost{background:rgba(255,255,255,.08);color:var(--text);border:1px solid rgba(255,255,255,.24)}
+.btn-sm{padding:9px 16px;font-size:13px;min-height:40px}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-img{position:absolute;inset:0;background:url(hero.jpg) center/cover;animation:kb 22s ease-out forwards;transform-origin:70% 30%}
+@keyframes kb{from{transform:scale(1.15)}to{transform:scale(1.02)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,9,18,.35) 0%,rgba(10,9,18,.25) 28%,rgba(10,9,18,.82) 60%,var(--ink) 100%)}
+@media(max-width:760px){.hero::after{background:linear-gradient(180deg,rgba(10,9,18,.3) 0%,rgba(10,9,18,.75) 32%,rgba(10,9,18,.92) 70%,var(--ink) 100%)}.hero-img{background-position:80% center}}
+.hero-in{position:relative;z-index:2;padding:120px 22px 60px;width:100%}
+.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px);padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:22px}
+.chip .stars{color:var(--yellow);letter-spacing:1px}
+.hero h1{font-size:clamp(54px,10.5vw,148px);max-width:11ch;text-wrap:balance}
+.hero p.lead{font-size:clamp(17px,2vw,20px);color:#dcd9ea;max-width:560px;margin:22px 0 30px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:36px;font-size:14px;color:var(--mute)}
+.hero-meta strong{display:block;color:var(--text);font-size:15px}
+.open-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);margin-right:6px;box-shadow:0 0 10px var(--green)}
+.open-dot.closed{background:#ff6b6b;box-shadow:0 0 10px #ff6b6b}
+
+/* marquee */
+.marquee{background:linear-gradient(90deg,#7b3dff,#3f6fff);color:#fff;overflow:hidden;white-space:nowrap;padding:14px 0}
+.marquee-track{display:inline-flex;gap:40px;animation:mq 30s linear infinite;font-family:Anton,sans-serif;font-size:26px;text-transform:uppercase}
+.marquee-track span::after{content:"☁";margin-left:40px;font-size:20px;vertical-align:middle;color:var(--yellow)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:100px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:42px}
+.sec-head h2{font-size:clamp(44px,7vw,90px)}
+.sec-head p{color:var(--mute);max-width:420px}
+
+/* product grid */
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.card{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:3/4;border:1px solid var(--line);background:var(--ink2)}
+.card img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .6s}
+.card:hover img{transform:scale(1.05)}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,7,14,0) 35%,rgba(8,7,14,.95) 88%)}
+.card .cap{position:absolute;left:18px;right:18px;bottom:18px;z-index:2;display:flex;flex-direction:column;align-items:flex-start;min-height:118px;justify-content:flex-end}
+.card h3{font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:28px;line-height:1}
+.card p{color:#d2cee2;font-size:14px;margin-top:6px;line-height:1.4;min-height:2.8em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.grid{grid-template-columns:1fr}.card{aspect-ratio:4/3}}
+.card{cursor:pointer}
+.card:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.card .more{display:inline-flex;margin-top:12px;background:var(--pink);color:#fff;font-weight:700;font-size:13px;padding:7px 14px;border-radius:999px;box-shadow:0 0 18px rgba(255,63,164,.45)}
+.tap-hint{color:var(--yellow);font-weight:600;font-size:14px;margin-top:8px}
+
+/* product sheet */
+#sheet{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(5,4,10,.78);backdrop-filter:blur(8px)}
+#sheet.open{display:flex}
+.sheet-box{width:min(760px,100%);max-height:90svh;overflow-y:auto;background:var(--ink2);border:1px solid var(--line);border-radius:24px;animation:pop .3s ease-out}
+@keyframes pop{from{transform:translateY(24px);opacity:0}}
+.sheet-top{position:relative;height:200px;overflow:hidden;border-radius:24px 24px 0 0}
+.sheet-top img{width:100%;height:100%;object-fit:cover}
+.sheet-top::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,var(--ink2))}
+.sheet-close{position:absolute;top:12px;right:12px;z-index:2;width:44px;height:44px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:22px;cursor:pointer}
+.sheet-close:focus-visible{outline:3px solid var(--yellow)}
+.sheet-body{padding:4px 26px 26px}
+.sheet-body h3{font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(34px,6vw,48px);line-height:1}
+.sheet-body .sub{color:var(--mute);margin:8px 0 18px}
+.search{width:100%;font:inherit;font-size:16px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:var(--ink);color:var(--text);margin-bottom:18px}
+.search:focus{outline:2px solid var(--pink)}
+.grp{margin-bottom:20px}
+.grp h4{font-size:15px;margin-bottom:10px;color:var(--yellow)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:7px 13px;font-size:14px}
+.chips span i{font-style:normal;color:var(--pink);font-weight:700;margin-left:6px;white-space:nowrap}
+.sheet-deal{background:rgba(255,63,164,.12);border:1px solid rgba(255,63,164,.4);border-radius:14px;padding:12px 16px;margin-bottom:18px;font-weight:600}
+.none{color:var(--mute);display:none}
+.sheet-foot{border-top:1px solid var(--line);padding-top:16px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;color:var(--mute);font-size:14px}
+@media(max-width:600px){#sheet{padding:0;align-items:flex-end}.sheet-box{border-radius:24px 24px 0 0;max-height:92svh}.sheet-top{height:150px}.sheet-body{padding:4px 18px 22px}}
+@media(max-width:860px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.card.wide{grid-column:span 2;aspect-ratio:16/10;min-height:0}}
+@media(max-width:540px){.grid{grid-template-columns:1fr}.card.wide{grid-column:auto;aspect-ratio:4/5}}
+
+/* deals band */
+.band{background:linear-gradient(120deg,#1a0f3a,#1d1f5e 55%,#141040);position:relative;overflow:hidden}
+.band::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(255,63,164,.25),transparent 45%),radial-gradient(circle at 10% 90%,rgba(255,226,74,.14),transparent 45%)}
+.band .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.band h2{font-size:clamp(44px,6.5vw,86px)}
+.band p{color:#d0cdea;font-size:18px;margin-top:18px;max-width:520px}
+.deals{display:grid;gap:14px}
+.deal{display:flex;gap:16px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:18px 20px}
+.deal .big{font-family:Anton,sans-serif;font-size:38px;line-height:1;min-width:92px;text-align:center}
+.deal b{display:block;font-size:17px}
+.deal span{color:var(--mute);font-size:14px}
+@media(max-width:860px){.band .wrap{grid-template-columns:1fr}}
+
+/* stock checker */
+.pop{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.pop button{font:inherit;font-size:14px;font-weight:600;color:var(--text);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:9px 15px;min-height:40px;cursor:pointer}
+.pop button:hover,.pop button:focus-visible{border-color:var(--yellow);outline:none}
+.checker{background:rgba(10,9,18,.6);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:24px}
+.ck-label{display:block;font-weight:700;margin-bottom:10px}
+.ck-row{display:flex;gap:10px}
+.ck-row input{flex:1;font:inherit;font-size:16px;padding:13px 16px;border-radius:999px;border:1px solid var(--line);background:var(--ink);color:var(--text);min-height:48px}
+.ck-row input:focus{outline:2px solid var(--pink)}
+#ck-out{margin-top:18px;min-height:150px}
+.ck-empty{color:var(--mute)}
+.ck-status{font-weight:700;font-size:18px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.ck-status .dot{width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+.ck-status.no .dot{background:var(--yellow);box-shadow:0 0 10px var(--yellow)}
+.ck-res{display:grid;gap:8px;max-height:300px;overflow-y:auto}
+.ck-item{display:flex;justify-content:space-between;align-items:center;gap:12px;text-align:left;width:100%;font:inherit;color:var(--text);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:11px 14px;cursor:pointer;min-height:48px}
+.ck-item:hover,.ck-item:focus-visible{border-color:var(--pink);outline:none}
+.ck-item small{color:var(--mute);font-size:13px;text-align:right}
+.ck-item i{font-style:normal;color:var(--pink);font-weight:700;margin-left:6px}
+.ck-note{color:var(--mute);font-size:13px;margin-top:12px}
+.ck-no p{color:#d0cdea;margin-bottom:14px}
+@media(max-width:540px){.ck-row{flex-direction:column}.checker{padding:18px}}
+.ask-toggle{margin-top:16px;background:none;border:0;color:var(--yellow);font:inherit;font-weight:700;cursor:pointer;padding:8px 0;min-height:44px}
+.ask{margin-top:10px;border-top:1px solid rgba(255,255,255,.14);padding-top:18px;display:grid;gap:12px}
+.ask h3{font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:28px;line-height:1}
+.ask-sub{color:var(--mute);margin-top:-6px;font-size:15px}
+.ask label{display:grid;gap:6px;font-size:14px;font-weight:600}
+.ask input,.ask textarea{font:inherit;font-size:16px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--ink);color:var(--text);resize:vertical}
+.ask input:focus,.ask textarea:focus{outline:2px solid var(--pink)}
+.ask .opt{color:var(--mute);font-weight:400}
+.ask-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.trap{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.ask-msg{font-weight:600;min-height:1.5em}
+.ask-msg.good{color:var(--green)}.ask-msg.bad{color:#ffb0b0}
+.ask-msg a{color:var(--yellow)}
+@media(max-width:540px){.ask-two{grid-template-columns:1fr}}
+/* gallery */
+.gal{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin}
+.gal figure{flex:0 0 min(78vw,520px);scroll-snap-align:start;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--ink2)}
+.gal img{width:100%;height:100%;object-fit:cover}
+.gal-ctl{display:flex;gap:10px}
+.gal-ctl button{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--ink2);color:var(--text);font-size:20px;cursor:pointer}
+.gal-ctl button:focus-visible{outline:3px solid var(--yellow)}
+
+/* reviews */
+.reviews{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.rev{background:var(--ink2);border:1px solid var(--line);border-radius:20px;padding:26px}
+.rev .stars{color:var(--yellow);letter-spacing:2px;margin-bottom:12px}
+.rev p{font-size:18px;font-weight:500}
+.rev small{display:block;color:var(--mute);margin-top:14px}
+@media(max-width:860px){.reviews{grid-template-columns:1fr}}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.panel{background:var(--ink2);border:1px solid var(--line);border-radius:22px;padding:32px;display:flex;flex-direction:column}
+.panel h3{font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:34px;margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse;font-size:16px}
+.hours td{padding:10px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;color:var(--mute);white-space:nowrap}
+.hours tr.today td{color:var(--yellow);font-weight:700}
+.addr{font-size:22px;font-weight:600;margin-bottom:6px}
+.addr-sub{color:var(--mute);margin-bottom:22px}
+.contact-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+.wide-front{margin-top:20px;aspect-ratio:21/8!important}.st-line{margin:-6px 0 16px;color:var(--mute)}.st-line .st{color:var(--text)}.contact-row{margin-bottom:20px}
+.store-img{border-radius:16px;overflow:hidden;aspect-ratio:16/9}
+.store-img img{width:100%;height:100%;object-fit:cover;object-position:center}
+@media(max-width:860px){.visit{grid-template-columns:1fr}.panel{padding:24px}}
+
+footer{border-top:1px solid var(--line);padding:40px 0 60px;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.notice{max-width:620px}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.hero-img,.marquee-track{animation:none}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs><linearGradient id="cg" x1="0" x2="1"><stop offset="0" stop-color="#b07cff"/><stop offset="1" stop-color="#4f7dff"/></linearGradient></defs>
+  <symbol id="cloud" viewBox="0 0 64 44"><path d="M16 42a14 14 0 0 1-2-27.9A18 18 0 0 1 48 12a15 15 0 0 1 0 30z" fill="url(#cg)"/><path d="M14 30h22M20 23h20" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".85"/></symbol>
+</svg>
+
+<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+  <div class="gate-card">
+    <svg width="64" height="44" style="margin:0 auto"><use href="#cloud"/></svg>
+    <h2 id="gate-title" class="display">21+ only</h2>
+    <p>This site has tobacco, vape and hemp products. You must be 21 or older to come in.</p>
+    <div class="gate-btns">
+      <button class="btn btn-main" id="gate-yes">I'm 21 or older</button>
+      <button class="btn btn-ghost" id="gate-no">I'm under 21</button>
+    </div>
+    <p id="gate-no-msg">Sorry, you have to be 21+ to view this site.</p>
+  </div>
+</div>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><svg viewBox="0 0 64 44"><use href="#cloud"/></svg><b>Cloud Chaser<small>VAPE &amp; SMOKE</small></b></a>
+    <div class="nav-links">
+      <a href="#shop">Shop</a>
+      <a href="#check">Check stock</a>
+      <a href="#inside">Inside</a>
+      <a href="#visit">Visit</a>
+      <a class="btn btn-main btn-sm" href="#visit">Find a shop</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-img" role="img" aria-label="Neon Vapes and Gummies signs over a full wall of products"></div>
+  <div class="wrap hero-in">
+    <div class="chip">2 shops in Cartersville · West Ave &amp; Burnt Hickory</div>
+    <h1 class="display">Cartersville's <span class="neon-p">vape</span> &amp; <span class="neon-y">smoke</span> shop.</h1>
+    <p class="lead">Walls of disposables, e-juice, hemp, glass, hookah, kratom and cold THC drinks. Two shops in Cartersville, open late.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-main" href="#visit">Find your closest shop →</a>
+      <a class="btn btn-ghost" href="#shop">See what we carry</a>
+    </div>
+    <div class="hero-meta">
+      <div><strong class="st" data-loc="west"><span class="open-dot"></span>West Ave</strong><span class="sh" data-loc="west">807 West Ave</span></div>
+      <div><strong class="st" data-loc="bh"><span class="open-dot"></span>Burnt Hickory</strong><span class="sh" data-loc="bh">1153 Burnt Hickory Rd</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Disposables</span><span>E-Juice</span><span>THCA</span><span>Pre-Rolls</span><span>Gummies</span><span>Glass</span><span>Hookah</span><span>Kratom</span><span>THC Drinks</span><span>Papers</span>
+    <span>Disposables</span><span>E-Juice</span><span>THCA</span><span>Pre-Rolls</span><span>Gummies</span><span>Glass</span><span>Hookah</span><span>Kratom</span><span>THC Drinks</span><span>Papers</span>
+  </div>
+</div>
+
+<section id="shop">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="display">What's on<br>the <span class="grad">shelves</span></h2>
+      <div><p>Hundreds of flavors in stock. Can't find yours? Ask us and we'll try to get it in.</p><p class="tap-hint">Tap any section to see brands and flavors →</p></div>
+    </div>
+    <div class="grid">
+      <div class="card reveal" data-cat="vapes" role="button" tabindex="0"><img src="vapes.jpg" alt="Wall of disposable vapes" loading="lazy"><div class="cap"><h3>Disposable Vapes</h3><p>Geek Bar, Raz, Kado Bar, Shisha XS, Lost Mary and more</p><span class="more">See what we have →</span></div></div>
+      <div class="card reveal" data-cat="juice" role="button" tabindex="0"><img src="juice.jpg" style="object-position:right bottom" alt="Case full of e-juice bottles" loading="lazy"><div class="cap"><h3>E-Juice &amp; Pods</h3><p>Juice Head, Jam Monster, Fruit Monster, pod kits</p><span class="more">See what we have →</span></div></div>
+      <div class="card reveal" data-cat="hemp" role="button" tabindex="0"><img src="hemp.jpg" style="object-position:40% bottom" alt="THCA pre-rolls and hash holes" loading="lazy"><div class="cap"><h3>THCA &amp; Pre-Rolls</h3><p>Pre-rolls, hash holes, blunts, carts</p><span class="more">See what we have →</span></div></div>
+      <div class="card reveal" data-cat="papers" role="button" tabindex="0"><img src="papers.jpg" style="object-position:30% bottom" alt="Gummies, papers and cones" loading="lazy"><div class="cap"><h3>Gummies &amp; Papers</h3><p>Edibles, RAW, OCB, cones, wraps</p><span class="more">See what we have →</span></div></div>
+      <div class="card reveal" data-cat="kratom" role="button" tabindex="0"><img src="kratom.jpg" alt="Kratom capsules in a glass case" loading="lazy"><div class="cap"><h3>Kratom</h3><p>Capsules and powder, many strains</p><span class="more">See what we have →</span></div></div>
+      <div class="card reveal" data-cat="hookah" role="button" tabindex="0"><img src="hookah.jpg" alt="Hookahs and glass in tall display cases" loading="lazy"><div class="cap"><h3>Glass &amp; Hookah</h3><p>Water pipes, hand pipes, hookahs, shisha, coals</p><span class="more">See what we have →</span></div></div>
+      <div class="card reveal" data-cat="drinks" role="button" tabindex="0"><img src="drinks.jpg" alt="Cooler of THC drinks" loading="lazy"><div class="cap"><h3>THC Drinks</h3><p>Seltzers, sodas and spritzes, ice cold</p><span class="more">See what we have →</span></div></div>
+      <div class="card reveal" data-cat="glass" role="button" tabindex="0"><img src="glass.jpg" alt="Glass, torches and infused cocktail displays" loading="lazy"><div class="cap"><h3>Torches &amp; More</h3>amp; More</h3><p>Lighters, torches, storage, accessories</p><span class="more">See what we have →</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="check">
+  <div class="wrap">
+    <div class="reveal">
+      <h2 class="display">Do we<br><span class="neon-y">have it?</span></h2>
+      <p>Type a brand, flavor or product to see if we carry it before you drive over.</p>
+      <div class="pop" id="pop" aria-label="Popular searches"></div>
+    </div>
+    <div class="checker reveal">
+      <label for="ck" class="ck-label">Search our shelves</label>
+      <div class="ck-row"><input id="ck" type="search" autocomplete="off" placeholder="Try Geek Bar, Zyn, Blue Razz, Torch…"><button class="btn btn-main" id="ck-go" type="button">Check</button></div>
+      <div id="ck-out" aria-live="polite"><p class="ck-empty">Results show up here.</p></div>
+      <button class="ask-toggle" id="ask-toggle" type="button" aria-expanded="false">Don't see it? Ask the shop →</button>
+      <form class="ask" id="ask" hidden novalidate>
+        <h3>Ask the shop</h3>
+        <p class="ask-sub">This goes straight to the shop. We'll call or text you back.</p>
+        <label>What are you looking for?<input name="item" id="ask-item" required maxlength="120" placeholder="Brand, flavor or product"></label>
+        <div class="ask-two">
+          <label>Your name<input name="name" required maxlength="60" autocomplete="given-name"></label>
+          <label>Your phone<input name="phone" required inputmode="tel" autocomplete="tel" placeholder="(678) 555-0123"></label>
+        </div>
+        <label><span>Anything else? <span class="opt">(optional)</span></span><textarea name="note" rows="2" maxlength="300" placeholder="Size, strength, how many…"></textarea></label>
+        <input class="trap" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-main" type="submit" id="ask-send">Send to the shop</button>
+        <p class="ask-msg" id="ask-msg" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="inside">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="display">Take a<br>look inside</h2>
+      <div class="gal-ctl"><button id="prev" aria-label="Previous photo">←</button><button id="next" aria-label="Next photo">→</button></div>
+    </div>
+    <div class="gal" id="gal">
+      <figure><img src="wall.jpg" alt="Vapes and Juices neon signs over the main counter" loading="lazy"></figure>
+      <figure><img src="zour.jpg" alt="Back counter with pre-rolls and gummies" loading="lazy"></figure>
+      <figure><img src="hero.jpg" alt="Gummies and vapes wall" loading="lazy"></figure>
+      <figure><img src="juice.jpg" alt="Register and e-juice case" loading="lazy"></figure>
+      <figure><img src="hookah.jpg" alt="Hookah and glass cases" loading="lazy"></figure>
+      <figure><img src="papers.jpg" alt="Papers and gummies counter" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2 class="display">Two shops in<br>Cartersville</h2><p>Stop by whichever one is closer.</p></div>
+    <div class="visit">
+      <div class="panel reveal">
+        <h3>West Ave</h3>
+        <p class="st-line"><strong class="st" data-loc="west"><span class="open-dot"></span>…</strong> <span class="sh" data-loc="west"></span></p>
+        <div class="addr">807 West Ave, Unit C</div>
+        <div class="addr-sub">Cartersville, GA 30120</div>
+        <div class="contact-row">
+          <a class="btn btn-main" href="https://www.google.com/maps/dir/?api=1&destination=807+West+Ave+Unit+C+Cartersville+GA+30120">Directions →</a>
+          <a class="btn btn-ghost" href="tel:+16785573692">(678) 557-3692</a>
+        </div>
+        <table class="hours" data-loc="west"><tr data-d="1"><td>Monday</td><td>10 AM – 10 PM</td></tr><tr data-d="2"><td>Tuesday</td><td>10 AM – 10 PM</td></tr><tr data-d="3"><td>Wednesday</td><td>10 AM – 10 PM</td></tr><tr data-d="4"><td>Thursday</td><td>10 AM – 10 PM</td></tr><tr data-d="5"><td>Friday</td><td>10 AM – 11 PM</td></tr><tr data-d="6"><td>Saturday</td><td>10 AM – 11 PM</td></tr><tr data-d="0"><td>Sunday</td><td>10 AM – 10 PM</td></tr></table>
+      </div>
+      <div class="panel reveal">
+        <h3>Burnt Hickory</h3>
+        <p class="st-line"><strong class="st" data-loc="bh"><span class="open-dot"></span>…</strong> <span class="sh" data-loc="bh"></span></p>
+        <div class="addr">1153 Burnt Hickory Rd SE, Ste C</div>
+        <div class="addr-sub">Cartersville, GA 30120</div>
+        <div class="contact-row">
+          <a class="btn btn-main" href="https://www.google.com/maps/dir/?api=1&destination=1153+Burnt+Hickory+Rd+SE+Cartersville+GA+30120">Directions →</a>
+          <a class="btn btn-ghost" href="tel:+16785573843">(678) 557-3843</a>
+        </div>
+        <table class="hours" data-loc="bh"><tr data-d="1"><td>Monday</td><td>Open 24 hours</td></tr><tr data-d="2"><td>Tuesday</td><td>Open 24 hours</td></tr><tr data-d="3"><td>Wednesday</td><td>Open 24 hours</td></tr><tr data-d="4"><td>Thursday</td><td>Open 24 hours</td></tr><tr data-d="5"><td>Friday</td><td>Open 24 hours</td></tr><tr data-d="6"><td>Saturday</td><td>Open 24 hours</td></tr><tr data-d="0"><td>Sunday</td><td>Open 24 hours</td></tr></table>
+      </div>
+    </div>
+    <div class="store-img wide-front reveal"><img src="front.jpg" alt="Cloud Chaser Vape &amp; Smoke storefront" loading="lazy"></div>
+  </div>
+</section>
+
+<div id="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-title">
+  <div class="sheet-box">
+    <div class="sheet-top"><img id="sh-img" src="vapes.jpg" alt=""><button class="sheet-close" id="sh-close" aria-label="Close">✕</button></div>
+    <div class="sheet-body">
+      <h3 id="sh-title">Disposable Vapes</h3>
+      <p class="sub" id="sh-sub"></p>
+      <div class="sheet-deal" id="sh-deal"></div>
+      <input class="search" id="sh-search" type="search" placeholder="Search brands or flavors" aria-label="Search this section">
+      <div id="sh-list"></div>
+      <p class="none" id="sh-none">Not seeing it? Call us and ask. We may have it in the back or can order it.</p>
+      <div class="sheet-foot"><span>What's in stock changes all the time. Call to check before you come in.</span><a class="btn btn-main btn-sm" href="tel:+16785573692">Call West Ave</a><a class="btn btn-ghost btn-sm" href="tel:+16785573843">Call Burnt Hickory</a></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div><b style="color:var(--text)">Cloud Chaser Vape &amp; Smoke</b><br>807 West Ave, Unit C, Cartersville, GA 30120 · (678) 557-3692<br>1153 Burnt Hickory Rd SE, Ste C, Cartersville, GA 30120 · (678) 557-3843</div>
+    <div class="notice">You must be 21+ with a valid ID to buy tobacco, vape, or hemp products. Products are not meant to diagnose, treat, or cure any disease. Warning: some products contain nicotine, an addictive chemical.</div>
+  </div>
+</footer>
+
+<script>
+{
+  const g=document.getElementById('gate');let ok=false;
+  try{ok=localStorage.getItem('cc21')==='1'}catch(e){}
+  if(ok)g.classList.add('hide');
+  document.getElementById('gate-yes').onclick=()=>{g.classList.add('hide');try{localStorage.setItem('cc21','1')}catch(e){}};
+  document.getElementById('gate-no').onclick=()=>{document.getElementById('gate-no-msg').style.display='block'};
+
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>40),{passive:true});
+
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  const gal=document.getElementById('gal');
+  const step=d=>{const f=gal.querySelector('figure');gal.scrollBy({left:d*((f?f.offsetWidth:400)+14),behavior:'smooth'})};
+  document.getElementById('prev').onclick=()=>step(-1);
+  document.getElementById('next').onclick=()=>step(1);
+  gal.tabIndex=0;
+  gal.addEventListener('keydown',e=>{if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1)});
+
+  const P={
+    vapes:{t:'Disposable Vapes',img:'vapes.jpg',sub:'A full wall of disposables, from small puff counts up to 70K.',deal:'10% off all vapes when you buy 2',g:[
+      ['Brands',['Geek Bar','Raz','Kado Bar','Shisha XS 70K','JNR Powermate Pro 70K','Lost Mary','Off Stamp','Foger','Fifty Bar','Oxbar','Olit']],
+      ['JNR Powermate Pro 70K flavors',['Pineapple Coconut','Grape Ice','Watermelon Peach Frost','Blue Razz Ice','Mexican Mango','White Peach Raspberry','Sour Apple Ice','Watermelon Ice','Cool Mint','Blueberry Watermelon','Miami Mint','Strawberry Kiwi Ice','Strawberry Watermelon','Lemon Heads','Clear Ice']],
+      ['Shisha XS 70K flavors',['Strawberry Ice','Peach Ice','Mango Pineapple','Mixed Berries','Three Mangoes','Passion Fruit Orange Lime','Blue Razz Ice','Miami Mint']]]},
+    juice:{t:'E-Juice & Pods',img:'juice.jpg',sub:'Freebase and salt nic e-juice, pod kits, and nicotine pouches.',deal:'',g:[
+      ['E-juice',['Juice Head','Jam Monster','Fruit Monster','Custard Monster','Cloud Nurdz','Coastal Clouds','Reds Apple']],
+      ['Coastal Clouds flavors',['Strawberry Pineapple Coconut','Strawberry Kiwi','Blood Orange Peach','Tropical Lemonade']],
+      ['Pod kits',['Vaporesso','Uwell Caliburn','Voopoo']],
+      ['Nicotine pouches',['Zyn','Velo','Alp']]]},
+    hemp:{t:'THCA & Pre-Rolls',img:'hemp.jpg',sub:'Pre-rolls, hash holes, blunts and carts.',deal:'$1 pre-rolls at the counter · Buy 2, get the 3rd free on select pre-roll packs',g:[
+      ['Brands',['Muha Meds','Diamond Lit Exotics','Venera','Astro Light','3Grams','Zour','Crazy','Destroyer','Four of a Kind','Flying Horse','Zushers','Stuffd','Hashies','Exotics']],
+      ['Destroyer 5-pack strains',['Gelato 41','Peach Glaze','Gushers','Rocket Fuel','White Runtz','Pink Runtz','Strawberry Diesel','Grape OG']],
+      ['THCA blunt flavors',['Blue Magic','Watermelon Zkittlez','Mendo Breath','Purple Sunset','Melon Mist','Mimosa','Apple Jack','California Orange']]]},
+    papers:{t:'Gummies & Papers',img:'papers.jpg',sub:'Edibles, plus everything you need to roll.',deal:'',g:[
+      ['Gummies & edibles',['Jelly','Zour','Bitez','Silly','Road Trip','Polka Dot','Lost']],
+      ['Papers & cones',['RAW','OCB','Bob Marley','Kingpin']],
+      ['Wraps & cigarillos',['Backwoods','Camo','True Wraps']],
+      ['Extras',['Blunt Black','Little Trees','Arya odor candles']]]},
+    kratom:{t:'Kratom',img:'kratom.jpg',sub:'Capsules and powder in a bunch of strains.',deal:'',g:[
+      ['Brands',['O.P.M.S.','Earth Kratom','Expert']],
+      ['Strains',['Maeng Da','White Maeng Da','Red Hulu Kapuas','White Borneo','Indo','Thai','Malay','Bali Green','Trainwreck']]]},
+    hookah:{t:'Glass & Hookah',img:'hookah.jpg',sub:'Water pipes, hand pipes, hookahs and everything for them.',deal:'',g:[
+      ['Glass',['Water pipes','Hand pipes','Silicone pipes','Dab rigs','Ooze Ripley','Celestial']],
+      ['Hookah',['Hookah kits','2-hose hookahs','Shisha','Coals','Coal burners','Hoses']],
+      ['Electronic',['Ploox X']]]},
+    drinks:{t:'THC Drinks',img:'drinks.jpg',sub:'Ice cold THC seltzers, sodas and spritzes.',deal:'BOGO free on After Dream and Upstate drinks',g:[
+      ['Drinks & prices',[['Torch 10mg','$5.99'],['Torch 60mg','$7.99'],['Upstate Elevator Supply','$5.99'],['Canabzy','$5.99'],['After Dream','$5.99'],['Artet 10mg THC Spritz','$5.99'],['Birdie 10mg','$5.99'],['Dayzed 10mg','$5.99'],['Forbidden Fruit Lemonade','$5.99'],['Cannabis Sparkling Water 10mg','$5.99'],['Señorita','$9.99'],['Best Dirty Lemonade','$9.99'],['Zourita 10mg','$9.99'],['Faded 70mg','$11.99'],['Zour Pop 100mg','$14.99']]],
+      ['Also in the cooler',['Five Islands','Artet cocktails','Monster','Rockstar','Pepsi','Coca-Cola']]]},
+    glass:{t:'Torches, Grinders & More',img:'glass.jpg',sub:'Lighters, torches, storage and accessories.',deal:'',g:[
+      ['Torches & lighters',['Maven torches','Scorch torches','Butane','Lighters']],
+      ['Storage & care',['Cutleaf FreshBox','Stash jars','Zen pipe cleaners']],
+      ['Accessories',['Grinders','Rolling trays','510 cart batteries','Ashtrays']]]}
+  };
+  const sh=document.getElementById('sheet'),list=document.getElementById('sh-list'),srch=document.getElementById('sh-search'),none=document.getElementById('sh-none');
+  let lastFocus=null;
+  const esc=x=>x.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  const render=(c,q)=>{
+    q=(q||'').toLowerCase();let n=0;
+    list.innerHTML=c.g.map(([h,items])=>{
+      const f=items.filter(it=>!q||(Array.isArray(it)?it[0]:it).toLowerCase().includes(q)||h.toLowerCase().includes(q));
+      n+=f.length;if(!f.length)return '';
+      return '<div class="grp"><h4>'+esc(h)+'</h4><div class="chips">'+f.map(it=>Array.isArray(it)?'<span>'+esc(it[0])+'<i>'+it[1]+'</i></span>':'<span>'+esc(it)+'</span>').join('')+'</div></div>';
+    }).join('');
+    none.style.display=n?'none':'block';
+  };
+  let cur=null;
+  const openSheet=k=>{
+    cur=P[k];if(!cur)return;lastFocus=document.activeElement;
+    document.getElementById('sh-title').textContent=cur.t;
+    document.getElementById('sh-sub').textContent=cur.sub;
+    const img=document.getElementById('sh-img');img.src=cur.img;img.alt=cur.t;
+    const dl=document.getElementById('sh-deal');dl.textContent=cur.deal?cur.deal:'';dl.style.display=cur.deal?'block':'none';
+    srch.value='';render(cur,'');
+    sh.classList.add('open');document.body.style.overflow='hidden';
+    document.getElementById('sh-close').focus();
+    try{history.replaceState(null,'','#'+k)}catch(e){}
+  };
+  const closeSheet=()=>{sh.classList.remove('open');document.body.style.overflow='';try{history.replaceState(null,'','#shop')}catch(e){}if(lastFocus)lastFocus.focus()};
+  document.querySelectorAll('.card[data-cat]').forEach(c=>{
+    c.addEventListener('click',()=>openSheet(c.dataset.cat));
+    c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openSheet(c.dataset.cat)}});
+  });
+  srch.addEventListener('input',()=>cur&&render(cur,srch.value));
+  document.getElementById('sh-close').onclick=closeSheet;
+  sh.addEventListener('click',e=>{if(e.target===sh)closeSheet()});
+  addEventListener('keydown',e=>{if(e.key==='Escape'&&sh.classList.contains('open'))closeSheet()});
+  const h0=location.hash.slice(1);if(P[h0]&&ok)openSheet(h0);
+
+  const IDX=[];
+  Object.entries(P).forEach(([k,c])=>c.g.forEach(([h,items])=>items.forEach(it=>{
+    const n=Array.isArray(it)?it[0]:it,pr=Array.isArray(it)?it[1]:'';
+    IDX.push({n,pr,k,cat:c.t,grp:h,q:(n+' '+h+' '+c.t).toLowerCase()});
+  })));
+  const ck=document.getElementById('ck'),out=document.getElementById('ck-out');
+  const norm=x=>x.toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
+  const check=()=>{
+    const q=norm(ck.value);
+    if(!q){out.innerHTML='<p class="ck-empty">Results show up here.</p>';return}
+    const words=q.split(' ');
+    const hits=IDX.filter(r=>{const t=norm(r.q);return words.every(w=>t.includes(w))});
+    if(!hits.length){
+      out.innerHTML='<div class="ck-no"><div class="ck-status no"><span class="dot"></span>Not on our list yet</div><p>We may still have “'+esc(ck.value.trim())+'” in the back, or we can try to order it. Send us a quick request below and we\u2019ll get back to you.</p></div>';
+      openAsk(ck.value.trim());
+      return;
+    }
+    out.innerHTML='<div class="ck-status"><span class="dot"></span>Yes, we carry '+(hits.length>1?hits.length+' matches':'it')+'</div><div class="ck-res">'+
+      hits.slice(0,30).map(r=>'<button class="ck-item" type="button" data-k="'+r.k+'"><span>'+esc(r.n)+(r.pr?'<i>'+r.pr+'</i>':'')+'</span><small>'+esc(r.cat)+' · '+esc(r.grp)+'</small></button>').join('')+
+      '</div><p class="ck-note">Tap one to see the full section. Stock changes fast, so call your closest shop to make sure it\u2019s on the shelf today.</p>';
+  };
+  ck.addEventListener('input',check);
+  document.getElementById('ck-go').onclick=check;
+  ck.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();check()}});
+  out.addEventListener('click',e=>{const b=e.target.closest('.ck-item');if(b)openSheet(b.dataset.k)});
+  document.getElementById('pop').innerHTML=['Geek Bar','Raz','Zyn','Juice Head','Torch','Blue Razz','Muha Meds','Maeng Da','Hookah'].map(x=>'<button type="button">'+x+'</button>').join('');
+  document.getElementById('pop').addEventListener('click',e=>{const b=e.target.closest('button');if(b){ck.value=b.textContent;check();ck.focus()}});
+
+  const askT=document.getElementById('ask-toggle'),ask=document.getElementById('ask'),askMsg=document.getElementById('ask-msg');
+  const HOOK='https://venox.app.n8n.cloud/webhook/cloudchaser-request';
+  function openAsk(item){ask.hidden=false;askT.setAttribute('aria-expanded','true');askT.hidden=true;if(item)document.getElementById('ask-item').value=item}
+  askT.onclick=()=>{openAsk(ck.value.trim());document.getElementById('ask-item').focus()};
+  ask.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const f=new FormData(ask),d=Object.fromEntries(f.entries());
+    const digits=String(d.phone||'').replace(/\D/g,'').replace(/^1(?=\d{10}$)/,'');
+    askMsg.className='ask-msg';
+    if(!String(d.item||'').trim()){askMsg.textContent='Tell us what you\u2019re looking for.';askMsg.classList.add('bad');return}
+    if(!String(d.name||'').trim()){askMsg.textContent='Add your name so we know who to call back.';askMsg.classList.add('bad');return}
+    if(digits.length!==10){askMsg.textContent='Enter a 10-digit phone number.';askMsg.classList.add('bad');return}
+    const btn=document.getElementById('ask-send');btn.disabled=true;btn.textContent='Sending…';
+    try{
+      const r=await fetch(HOOK,{method:'POST',body:new URLSearchParams(d)});
+      const j=await r.json().catch(()=>({}));
+      if(!r.ok||!j.ok)throw new Error(j.error||'failed');
+      ask.reset();askMsg.textContent='Sent! The shop will get back to you soon.';askMsg.classList.add('good');
+    }catch(err){
+      const body=encodeURIComponent('Hi, do you have '+(d.item||'')+'? - '+(d.name||''));
+      askMsg.innerHTML='Couldn\u2019t send that right now. Call West Ave at (678) 557-3692 or Burnt Hickory at (678) 557-3843.';
+      askMsg.classList.add('bad');
+    }
+    btn.disabled=false;btn.textContent='Send to the shop';
+  });
+
+  const HRS={west:{0:[10,22],1:[10,22],2:[10,22],3:[10,22],4:[10,22],5:[10,23],6:[10,23]},bh:{0:[0,24],1:[0,24],2:[0,24],3:[0,24],4:[0,24],5:[0,24],6:[0,24]}};
+  let now;try{now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}))}catch(e){now=new Date()}
+  const d=now.getDay(),h=now.getHours()+now.getMinutes()/60;
+  const fmt=x=>{x=x%24;return (x%12||12)+(x>=12?' PM':' AM')};
+  Object.entries(HRS).forEach(([k,w])=>{
+    const t=w[d],open=h>=t[0]&&h<t[1],all=t[0]===0&&t[1]===24;
+    const txt=all?'Open 24 hours':open?'Open until '+fmt(t[1]):'Opens '+fmt(t[0]);
+    document.querySelectorAll('.st[data-loc="'+k+'"] .open-dot').forEach(el=>el.classList.toggle('closed',!open));
+    document.querySelectorAll('.st-line .st[data-loc="'+k+'"]').forEach(el=>el.lastChild.textContent=open?'Open now':'Closed now');
+    document.querySelectorAll('.sh[data-loc="'+k+'"]').forEach(el=>el.textContent=el.closest('.st-line')?'· '+(all?'24 hours':open?'until '+fmt(t[1]):'opens '+fmt(t[0])):txt);
+    const row=document.querySelector('table.hours[data-loc="'+k+'"] tr[data-d="'+d+'"]');if(row)row.classList.add('today');
+  });
+}
+</script>
+</body>
+</html>
